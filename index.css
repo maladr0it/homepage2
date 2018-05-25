@@ -1,13 +1,3 @@
-@media only screen and (orientation: portrait) {
-  .container {
-    max-width: none;
-  }
-  .image-preview {
-    display: block;
-    margin: auto;
-    width: 80%;
-  }
-}
 body {
   color: #454545;
   margin: 0;
@@ -27,14 +17,13 @@ a {
 .container {
   padding-left: 5px;
   padding-right: 5px;
-  max-width: 50rem;
+  max-width: 40rem;
   margin: auto;
 }
 .image-preview {
   display: block;
   margin: auto;
-  /* width: 80%; */
-  height: 25rem;
+  width: 60%;
 }
 .hero-image {
   width: 100%;
