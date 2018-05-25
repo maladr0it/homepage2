@@ -1,63 +1,109 @@
-<head>
-  <title>Lochie.</title>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Lochie.</title>
+  </head>
 
-<body>
-  <h1>Hi, I'm Lochie</h1>
-  <p>I'm a front-end developer who strives to unlock the full potential of UI.</p>
-
-
-  <section>
-    <h2>Me</h2>
-    <p>I love making beautiful, responsive web-applications. With <b>three years</b> in the React.js game, it is my framework of choice. I am driven to produce apps that feel natural to use, are of high-performance and inspire delight in the user.</p>
-    <p>I am an extremely active participant in the web-development community, participating online via <a href="#">Reactiflux</a> as well as in local meetups and hackathons.</p>
-    <p>An avid traveller, I enjoy travelling the world for inspiration.  My hobbies include calligraphy, rugby and flim critique. I'm currently reading David Foster Wallace's <a href="#"><i>Infinite Jest</i></a>, and am jamming to <a href="#">Jorja Smith</a> in my coding sessions.</p>
-  </section>
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>
-        <h3>React.js</h3>
-        <p>Declarative design, reusable components, the virtual DOM, enough said. An all-around awesome framework that has fundamentally changed my workflow.</p>
-      </li>
-      <li>
-        <h3>Redux</h3>
-        <p>A powerful implementation of Flux architecture and my go-to answer to managing state complexity. App persistance and time-travel debugging are the cherry on top.</p>
-      </li>
-      <li>
-        <h3>Firebase</h3>
-        <p>Real-time delivery of data with Firebase's <a href="#">Cloud Firestore</a> has proven extremely useful in my work at <a href="#">tabiko.ai</a>, where many thousands of customer interactions must be observable live as they unfold.</p>
-      </li>
-      <li>
-        <h3>Node.js</h3>
-        <p>Event-driven architecture, scalability and most importantly NPM make this my favourite back-end environment.  Both <a href="#">Fusion Systems</a> and <a href="#">tabiko.ai</a>'s high I/O services have proven especially suited to this.</p>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <h2>Experience</h2>
-    <p>So far I have brought two products to production at <a href="#">Fusion Systems</a> and <a href="#">tabiko.ai</a>. During this time, I have introduced practices such as Test-Driven-Development and code-reviews to bring my team to new levels of productivity.</p>
-    <p>For more information, please see my <a href="#">resume</a>.</p>
-  </section>
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <h3>eph</h3>
-        <p>An anonymous ephemeral messaging client where messages are removed after 24 hours.  <a href="#">Visit this link</a> to message me, and check back there later for my reply!</p>
-      </li>
-      <li>
-        <h3>tabiko.ai</h3>
-        <p>Chat client for which I am product-owner. Build a travel itinerary with a travel-agent via instant-messaging, complete with hotel suggestions and bookings.</p>
-      </li>
-      <li>
-        <h3>Drag & Drop playground</h3>
-        <p>A drag-and-drop system featuring object weight, displacement and animation.</p>
-      </li>
-      <li>
-        <h3>PokeTinder</h3>
-        <p>A bit of fun experimenting with PokeAPI.</p>
-      </li>
-    </ul>
-  </section>
-</body>
+  <body>
+    <header>
+      <h1>Hi, I'm Lochie</h1>
+      <p>I'm a front-end developer who strives to unlock the full potential of UI.</p>
+      <div><a href="https://github.com/maladr0it" target="_blank">Github</a> <a>a</a> <a>b</a></div>
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+      </ul>
+    </header>
+    <section id="me">
+      <h2>About Me</h2>
+      <p>I love making beautiful, responsive web-applications. With <strong>three years</strong> in the React.js game, it is my framework of choice. I am driven to produce apps that feel natural to use, are of high-performance and inspire delight in the user.</p>
+      <p>I am an extremely active participant in the web-development community, participating online via <a href="https://www.reactiflux.com/" target="_blank">Reactiflux</a> as well as in local meetups and hackathons.</p>
+      <p>An avid traveller, I enjoy travelling the world for inspiration.  My hobbies include calligraphy, rugby and flim critique. I'm currently reading David Foster Wallace's <a href="https://en.wikipedia.org/wiki/Infinite_Jest" target="_blank"><em>Infinite Jest</em></a>, and am jamming to <a href="https://soundcloud.com/jorjasmith" target="_blank">Jorja Smith</a> in my coding sessions.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <h3>24 Chat</h3>
+            <img src="img/24chat.png" class="image-preview" />
+            <p><a href="https://github.com/maladr0it/eph">Github</a> <a href="https://24.chat/@ryeQ5sV17">Page</a></p>
+            <p>An anonymous ephemeral messaging client where messages are removed after 24 hours.  <a href="https://24.chat/@ryeQ5sV17">Visit this link</a> to message me, and check back there later for my reply!</p>
+          </li>
+          <li>
+            <h3>tabiko.ai</h3>
+            <img src="img/tabiko.png" class="image-preview" />
+            <p><a href="https://tabiko.ai/">Page</a></p>
+            <p>Chat client for which I am product-owner. Build a travel itinerary with a travel-agent via instant-messaging, complete with hotel suggestions and bookings.</p>
+          </li>
+          <li>
+            <h3>Drag & Drop playground</h3>
+            <img src="img/dnd.gif" class="image-preview" />
+            <p><a href="https://github.com/maladr0it/animations">Github</a></p>
+            <p>A drag-and-drop system featuring object weight, displacement and animation.</p>
+          </li>
+          <li>
+            <h3>PokeTinder</h3>
+            <img src="img/poketinder.gif" class="image-preview" />
+            <p><a href="https://github.com/maladr0it/poketinder">Github</a></p>
+            <p>A bit of fun experimenting with PokeAPI.</p>
+          </li>
+        </ul>
+      </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>
+          <h3>React.js</h3>
+          <p>Declarative design, reusable components, the virtual DOM, enough said. An all-around awesome framework that has fundamentally changed my workflow.</p>
+        </li>
+        <li>
+          <h3>Redux</h3>
+          <p>A powerful implementation of Flux architecture and my go-to answer to managing state complexity. App persistance and time-travel debugging are the cherry on top.</p>
+        </li>
+        <li>
+          <h3>Firebase</h3>
+          <p>Real-time delivery of data with Firebase's <a href="https://firebase.google.com/docs/firestore/">Cloud Firestore</a> has proven extremely useful in my work at <a href="https://tabiko.ai/">tabiko.ai</a>, where many thousands of customer interactions must be observable live as they unfold.</p>
+        </li>
+        <li>
+          <h3>Node.js</h3>
+          <p>Event-driven architecture, scalability and most importantly NPM make this my favourite back-end environment.  Both <a href="https://www.fusionsystems.org/">Fusion Systems</a> and <a href="https://tabiko.ai/">tabiko.ai</a>'s high I/O services have proven especially suited to this.</p>
+        </li>
+      </ul>
+    </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>For more information, please see my <a href="#">resume</a>.</p>
+      <ul>
+        <li>
+          <h3>Tabiko.ai - Tokyo</h3>
+          <em>Product Owner</em>
+          <p>Here I'm building a one-to-many chat application to handle many thousands of customer interactions at Tabiko.ai.  It offers a high performance UI to manage payments, itineraries and travel-related search.</p>
+          <p>I have also introduced practices such as Test-Driven-Development and code-reviews to bring the engineering team to new levels of productivity.</p>
+        </li>
+        <li>
+          <h3>Fusion Systems - Tokyo</h3>
+          <em>Front-End Developer</em>
+          <p>Here I helped build Dimare, a work-shift management software for several restaurant chains in South-East-Asia.  I was responsible for the UX vision for the product, working alongside our clients to identify their use-cases and pain-points.</p>
+          <p>I worked with a team of six developers, learning about advanced state management, agile methodology and javascript best-practices from my mentor.</p>
+        </li>
+        <li>
+          <h3>Burra Foods - Australia</h3>
+          <em>Student Project - Team Leader</em>
+          <p>As part of a scholarship program, I lead a team of five students to develop software to optimize this dairy-plant's operations.  We used ruby for modeling of the plant, and javascript for report generation in a web-based view.</p>
+          <p>I was hired full-time after graduation to continue development of the product, which is still used today!</p>
+        </li>
+        <li>
+          <h3>Nike - Shanghai</h3>
+          <em>Internship</em>
+          <p>I worked in project management for construction of new Nike HQ.  During my time there, I made VBA tools for easier report generation.</p>
+          <p>However, the biggest take-away from this job was in learning project-management skills which have turned me into an effective leader in my future roles.</p>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
