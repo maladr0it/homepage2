@@ -1,0 +1,55 @@
+# Lachlan Bradford
+### Web Developer  
+lochie.xyz/  
+M: +81 50 5532 2768  
+E: bradford.lachlan@gmail.com
+___
+## Key Skills
+#### Programming Languages
++ Javascript
++ Ruby
+#### Frameworks/Platforms
++ ReactJS + Redux
++ Firebase + Cloud Firestore
++ NodeJS + Express
+#### Software
++ VS Code
++ Chrome Developer Tools
++ Redux Developer Tools
+#### Spoken Languages
++ English (native)
++ Japanese (intermediate)
+___
+## Education
+### MAR 2011 - JUL 2015: MONASH UNIVERSITY - Australia
+#### Bachelor of Engineering (1st Class Honors)
++ Thesis: "Computational analysis of travel patterns using Uber trip data"
++ 82% GPA
+___
+## Relevant Employment History
+### NOV 2017 - PRESENT: Tabiko.ai - Tokyo
+#### Product Owner
++ Building one-to-many chat application for customer communication
++ Responsible for database design and web application
++ Using React Redux, and Firebase real-time database
++ Team of 3 developers, each supporting a different product in the ecosystem
+___
+### SEP 2016 - NOV 2017: FUSION SYSTEMS - Tokyo
+#### Front-End Developer
++ Built work-shift management software for several restaurant chains in South East Asia
++ Used React + Redux for advanced application state management
++ Team of 6 developers
+___
+### JUL 2015 - JUL 2016: Nagasaki Board of Education
+#### Assistant Language Teacher
+___
+### MAR 2014 - JUL 2015: Burra Foods - Australia 
+#### Junior Software Engineer
++ Lead a team of 5 students to develop software to optimize the plant's operations
++ Hired full-time after graduation to continue development
++ Used ruby for modeling and javascript for report generation
+___
+### DEC 2013 - MAR 2014: NIKE - Shanghai
+#### Internship
++ Worked in project management for construction of new HQ
++ Made VBA tools for easier report generation
