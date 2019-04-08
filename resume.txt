@@ -1,66 +1,62 @@
 # Lachlan Bradford
-### Web Developer  
+
+### Web Developer
+
 lochie.xyz/
 M: +81 50 5532 2768
 E: bradford.lachlan@gmail.com
-___
 
-## Key Skills
-#### Programming Languages
-+ Javascript
-+ Typescript
+---
 
-#### Frameworks/Platforms
-+ React + Redux
-+ Firebase + Cloud Firestore
-+ Node + Express
+## Skills
 
-#### Software
-+ VS Code
-+ Chrome Developer Tools
-+ Redux Developer Tools
+- Javascript
+- Typescript
+- React + Redux
+- Firebase + Cloud Firestore
+- Node + Express
 
-#### Spoken Languages
-+ English (native)
-+ Japanese (intermediate)
-___
+---
 
 ## Education
-### MAR 2011 - JUL 2015: MONASH UNIVERSITY - Australia
-#### Bachelor of Engineering (Honors)
-+ Thesis: "Computational analysis of travel patterns using Uber trip data"
-+ 82% GPA
-___
 
-## Relevant Employment History
+### MAR 2011 - JUL 2015: MONASH UNIVERSITY - Australia
+
+#### Bachelor of Engineering (Honors)
+
+---
+
+## Employment
 
 ### AUG 2018 - PRESENT: Indeed - Tokyo
-#### Design Technologist
-+ Working closely with designers and product managers to create rapid proof of concept prototypes
-+ Prototypes are subject to user-testing, live A/B testing and eventually transitioned to stable, production-ready code
-+ Using a variety of cutting-edge technologies, including React Hooks API, CSS-in-JS solutions and GraphQL
 
+#### Design Technologist
+
+- Working closely with designers and product managers to create rapid proof of concept prototypes
+- Prototypes are subject to user-testing, live A/B testing and eventually transitioned to stable, production-ready code
+- Using a variety of cutting-edge technologies, including React Hooks API, CSS-in-JS solutions and GraphQL
 
 ### JUL 2018 - AUG 2018: Kokus.ai - Tokyo
+
 #### Front-End Developer (Contractor)
-+ Build a chat-bot interface in a 1-month timeframe
-+ Formatted training data for the chat-bot
-+ Used React + Redux, IBM Watson and Google DialogueFlow
+
+- Built a chat-bot interface in a 1-month timeframe
+- Formatted training data for the chat-bot
+- Used React + Redux, IBM Watson and Google DialogueFlow
 
 ### NOV 2017 - JUN 2018: Tabiko.ai - Tokyo
+
 #### Product Owner
-+ Built one-to-many chat application for customer communication
-+ Responsible for database design and web application
-+ Used React + Redux, and Firebase real-time database
-+ Team of 3 developers, each supporting a different product in the ecosystem
-___
+
+- Built one-to-many chat application for customer communication
+- Responsible for database design and web application
+- Used React + Redux, and Firebase real-time database
+- Team of 3 developers, each supporting a different product in the ecosystem
 
 ### SEP 2016 - NOV 2017: FUSION SYSTEMS - Tokyo
-#### Front-End Developer
-+ Built work-shift management software for several restaurant chains in South East Asia
-+ Used React + Redux for advanced application state management
-+ Team of 6 developers
-___
 
-### JUL 2015 - JUL 2016: Nagasaki Board of Education
-#### Assistant Language Teacher
+#### Front-End Developer
+
+- Built work-shift management software for several restaurant chains in South East Asia
+- Used React + Redux for advanced application state management
+- Team of 6 developers
