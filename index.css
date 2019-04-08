@@ -1,6 +1,5 @@
 body {
   color: #222;
-  /* background-color: fuchsia; */
   margin: 0;
   padding: 0;
   font-family: "Merriweather", serif;
@@ -9,9 +8,10 @@ body {
 h1,
 h2,
 h3 {
-  font-family: Montserrat, sans-serif;
-  color: #222;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
+
 h2 {
   border-bottom: 2px solid #222;
 }
@@ -19,21 +19,11 @@ a {
   color: fuchsia;
 }
 .container {
-  padding: 2rem;
+  padding: 0 2rem;
   max-width: 40rem;
   margin: auto;
-}
-.image-preview {
-  display: block;
-  margin: auto;
-  width: 60%;
 }
 .hero-image {
   width: 100%;
   object-fit: cover;
-}
-#projects ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
