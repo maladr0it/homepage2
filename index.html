@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="A front end web-developer specializing in React. Produces rapid prototypes for Indeed as a Design Technologist."
+    />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link
@@ -14,53 +18,73 @@
   <body>
     <main>
       <header>
-        <img src="img/hero.jpg" class="hero-image" />
+        <picture>
+          <source
+            srcset="
+              img/hero-480w.webp   480w,
+              img/hero-800w.webp   800w,
+              img/hero-1200w.webp 1200w
+            "
+          />
+          <source
+            srcset="
+              img/hero-480w.jpg   480w,
+              img/hero-800w.jpg   800w,
+              img/hero-1200w.jpg 1200w
+            "
+          />
+          <img src="img/hero-800w" class="hero-image" alt="me" />
+        </picture>
         <h1>Hi! 👋 I'm Lochie</h1>
         <p>
           I'm a front-end developer who strives to unlock the full potential of
           UI.
         </p>
-        <div>
-          <a href="resume.txt" target="_blank" rel="noopener noreferrer"
-            >resume.txt</a
-          >
-          /
-          <a
-            href="https://docs.google.com/document/d/1ZlfNiCx3Zq2jqw1aCa44Bks10tqLoHfaXmkOwCyqfEw/edit?usp=sharing"
-            target="blank"
-            rel="noopener noreferrer"
-            >resume (google docs)</a
-          >
-        </div>
-        <div>
-          <a
-            href="https://github.com/maladr0it"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Github</a
-          >
-          /
-          <a
-            href="https://www.linkedin.com/in/lachlan-bradford-44556487/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Linkedin</a
-          >
-        </div>
-        <div>
-          <a
-            href="mailto: bradford.lachlan@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >bradford.lachlan@gmail.com</a
-          >
+        <div class="links">
+          <div>
+            <a href="resume.txt" target="_blank" rel="noopener noreferrer"
+              >resume.txt</a
+            >
+            /
+            <a
+              href="https://docs.google.com/document/d/1ZlfNiCx3Zq2jqw1aCa44Bks10tqLoHfaXmkOwCyqfEw/edit?usp=sharing"
+              target="blank"
+              rel="noopener noreferrer"
+              >resume (google docs)</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://github.com/maladr0it"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Github</a
+            >
+            /
+            <a
+              href="https://www.linkedin.com/in/lachlan-bradford-44556487/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Linkedin</a
+            >
+          </div>
+          <address>
+            <a
+              href="mailto: bradford.lachlan@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >bradford.lachlan@gmail.com</a
+            >
+          </address>
         </div>
         <h2 class="section-heading">Contents</h2>
-        <ul>
-          <li><a href="#me">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-        </ul>
+        <nav class="contents">
+          <ul>
+            <li><a href="#me">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+          </ul>
+        </nav>
       </header>
       <section id="me">
         <h2 class="section-heading">About Me</h2>

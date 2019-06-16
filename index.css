@@ -14,9 +14,18 @@ a {
   color: #d100d1;
 }
 main {
-  padding: 0 2rem;
   max-width: 40rem;
+  padding: 0 2rem;
   margin: auto;
+}
+address {
+  font-style: normal;
+}
+.links > * {
+  margin-bottom: 0.6em;
+}
+.contents li {
+  margin-bottom: 0.6em;
 }
 .section-heading {
   border-bottom: 2px solid #222;
