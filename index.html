@@ -8,11 +8,68 @@
       content="A front end web-developer specializing in React. Produces rapid prototypes for Indeed as a Design Technologist."
     />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:700|Merriweather&display=swap"
-      rel="stylesheet"
-    />
+    <style>
+      @font-face {
+        font-family: "Lora";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local("Lora Bold"), local("Lora-Bold"),
+          url(https://fonts.gstatic.com/s/lora/v13/0QIgMX1D_JOuO7HeNtxumtus-7w.woff2)
+            format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local("Merriweather Regular"), local("Merriweather-Regular"),
+          url(https://fonts.gstatic.com/s/merriweather/v20/u-440qyriQwlOrhSvowK_l5-fCZMdeX3rg.woff2)
+            format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      body {
+        color: #222;
+        margin: 0;
+        padding: 0;
+        font-family: "Merriweather", serif;
+        line-height: 1.7;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Lora", serif;
+      }
+      a {
+        color: #d100d1;
+      }
+      main {
+        max-width: 40rem;
+        padding: 0 1rem;
+        margin: auto;
+      }
+      address {
+        font-style: normal;
+      }
+      .links > * {
+        margin-bottom: 0.6em;
+      }
+      .contents li {
+        margin-bottom: 0.6em;
+      }
+      .section-heading {
+        border-bottom: 2px solid #222;
+      }
+      .hero-image {
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
     <title>Lochie 👋</title>
   </head>
   <body>
@@ -22,17 +79,17 @@
           <source
             type="image/webp"
             srcset="
-              img/hero-400w.webp   800w,
-              img/hero-800w.webp  1600w,
-              img/hero-1200w.webp 2400w
+              img/hero-400w.webp   600w,
+              img/hero-800w.webp  1200w,
+              img/hero-1200w.webp 1800w
             "
           />
           <source
             type="img/jpg"
             srcset="
-              img/hero-400w.jpg   800w,
-              img/hero-800w.jpg  1600w,
-              img/hero-1200w.jpg 2400w
+              img/hero-400w.jpg   600w,
+              img/hero-800w.jpg  1200w,
+              img/hero-1200w.jpg 1800w
             "
           />
           <img src="img/hero-800w.jpg" class="hero-image" alt="me" />
