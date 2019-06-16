@@ -8,20 +8,18 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-}
-
-h2 {
-  border-bottom: 2px solid #222;
+  font-family: "Lora", serif;
 }
 a {
-  color: fuchsia;
+  color: #d100d1;
 }
-.container {
+main {
   padding: 0 2rem;
   max-width: 40rem;
   margin: auto;
+}
+.section-heading {
+  border-bottom: 2px solid #222;
 }
 .hero-image {
   width: 100%;
