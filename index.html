@@ -47,9 +47,19 @@
       .section-heading {
         border-bottom: 2px solid #222;
       }
+      .hero-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-image-placeholder {
+        padding-top: 75%;
+        background: #f2f2f2;
+      }
       .hero-image {
         width: 100%;
-        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
       }
     </style>
     <title>Lochie 👋</title>
@@ -57,25 +67,28 @@
   <body>
     <main>
       <header>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              img/hero-400w.webp   600w,
-              img/hero-800w.webp  1200w,
-              img/hero-1200w.webp 1800w
-            "
-          />
-          <source
-            type="img/jpg"
-            srcset="
-              img/hero-400w.jpg   600w,
-              img/hero-800w.jpg  1200w,
-              img/hero-1200w.jpg 1800w
-            "
-          />
-          <img src="img/hero-800w.jpg" class="hero-image" alt="me" />
-        </picture>
+        <div class="hero-image-container">
+          <div class="hero-image-placeholder"></div>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                img/hero-400w.webp   600w,
+                img/hero-800w.webp  1200w,
+                img/hero-1200w.webp 1800w
+              "
+            />
+            <source
+              type="img/jpg"
+              srcset="
+                img/hero-400w.jpg   600w,
+                img/hero-800w.jpg  1200w,
+                img/hero-1200w.jpg 1800w
+              "
+            />
+            <img src="img/hero-800w.jpg" class="hero-image" alt="me" />
+          </picture>
+        </div>
         <h1>Hi! 👋 I'm Lochie</h1>
         <p>
           I'm a front-end developer who strives to unlock the full potential of

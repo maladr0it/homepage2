@@ -59,7 +59,6 @@ bradford.lachlan@gmail.com
 - Built one-to-many chat application for customer communication
 - Responsible for database design and web application
 - Used React + Redux, and Firebase real-time database
-- Team of 3 developers, each supporting a different product in the ecosystem
 
 ### SEP 2016 - NOV 2017: FUSION SYSTEMS - Tokyo
 
