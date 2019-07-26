@@ -60,26 +60,23 @@
         top: 50%;
         transform: translateY(-50%);
       }
-      .icon-list {
+      .job-list {
         list-style: none;
         padding-left: 0;
       }
-      .icon-list li {
+      .job-list li {
         margin-bottom: 2rem;
       }
-      .icon-list-item-header {
+      .job-header {
         display: flex;
         align-items: center;
       }
-      .icon-list-item-description {
-        margin-left: 4rem;
-      }
-      .icon-list-icon-container {
+      .job-logo-container {
         display: flex;
         align-items: center;
         margin-right: 1rem;
       }
-      .icon-list-icon {
+      .job-logo {
         width: 3rem;
       }
       .job-employer {
@@ -89,6 +86,9 @@
       .job-title {
         margin: 0;
         font-style: italic;
+      }
+      .job-description {
+        margin-left: 4rem;
       }
     </style>
   </head>
@@ -262,14 +262,14 @@
             >resume</a
           >.
         </p>
-        <ul class="icon-list">
+        <ul class="job-list">
           <li>
-            <header class="icon-list-item-header">
-              <picture class="icon-list-icon-container">
+            <header class="job-header">
+              <picture class="job-logo-container">
                 <source type="image/webp" srcset="img/indeed_logo_128.webp" />
                 <img
                   src="img/indeed_logo_128.png"
-                  class="icon-list-icon"
+                  class="job-logo"
                   alt="Indeed logo"
                 />
               </picture>
@@ -278,7 +278,7 @@
                 <p class="job-title">Design Technologist</p>
               </div>
             </header>
-            <div class="icon-list-item-description">
+            <div class="job-description">
               <p>
                 I work closely with designers and product managers to create
                 rapid proof of concept prototypes. These are subject to
@@ -293,12 +293,12 @@
             </div>
           </li>
           <li>
-            <header class="icon-list-item-header">
-              <picture class="icon-list-icon-container">
+            <header class="job-header">
+              <picture class="job-logo-container">
                 <source type="image/webp" srcset="img/tabiko_logo_128.webp" />
                 <img
                   src="img/tabiko_logo_128.png"
-                  class="icon-list-icon"
+                  class="job-logo"
                   alt="Tabiko logo"
                 />
               </picture>
@@ -307,7 +307,7 @@
                 <p class="job-title">Front-End Developer</p>
               </div>
             </header>
-            <div class="icon-list-item-description">
+            <div class="job-description">
               <p>
                 Here I built a one-to-many chat application to handle many
                 thousands of customer interactions at Tabiko.ai. It offers a
@@ -322,12 +322,12 @@
             </div>
           </li>
           <li>
-            <header class="icon-list-item-header">
-              <picture class="icon-list-icon-container">
+            <header class="job-header">
+              <picture class="job-logo-container">
                 <source type="image/webp" srcset="img/fusion_logo_128.webp" />
                 <img
                   src="img/fusion_logo_128.png"
-                  class="icon-list-icon"
+                  class="job-logo"
                   alt="Fusion Systems logo"
                 />
               </picture>
@@ -336,7 +336,7 @@
                 <p class="job-title">Front-End Developer</p>
               </div>
             </header>
-            <div class="icon-list-item-description">
+            <div class="job-description">
               <p>
                 Here I helped build <em>Dimare</em>, a work-shift management
                 software for several restaurant chains in South-East-Asia. I was
