@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description"
+    content="Lachlan Bradford aka Lochie, a front end web-developer specializing in React. Produces rapid prototypes for Indeed as a Design Technologist." />
+  <title>Lochie 👋</title>
+  <link rel="icon" type="image/x-icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVR42mO4yHDxPyWYYRgawEAAjBowMgwYgXkBAAP/+NBa7C6nAAAAAElFTkSuQmCC" />
+  <style>
+    body {
+      color: #222;
+      margin: 0;
+      font-family: "-apple-system", "BlinkMacSystemFont", "Helvetica Neue",
+        Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    h1,
+    h2 {
+      font-weight: normal;
+    }
+
+    h3 {
+      font-weight: 500;
+    }
+
+    a {
+      color: #d100d1;
+    }
+
+    main {
+      max-width: 40rem;
+      padding: 0.25rem 0.75rem;
+      margin: auto;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    .links>* {
+      margin-bottom: 0.6em;
+    }
+
+    .contents li {
+      margin-bottom: 0.6em;
+    }
+
+    .section-heading {
+      border-bottom: 1px solid #222;
+    }
+
+    .hero-image-container {
+      position: relative;
+      margin: 0 -4px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .hero-image-placeholder {
+      padding-top: 75%;
+      background: #f2f2f2;
+    }
+
+    .hero-image {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .job-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .job-list li:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    .job-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .job-logo-container {
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .job-logo {
+      width: 3rem;
+    }
+
+    .job-employer {
+      margin-top: 0;
+      margin-bottom: 0.2em;
+    }
+
+    .job-title {
+      margin: 0;
+      font-style: italic;
+    }
+
+    .job-description {
+      margin-left: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="hero-image-container">
+        <div class="hero-image-placeholder"></div>
+        <picture>
+          <source type="image/webp" srcset="
+                img/hero_400w.webp   600w,
+                img/hero_800w.webp  1200w,
+                img/hero_1200w.webp 1800w
+              " />
+          <source type="img/jpg" srcset="
+                img/hero_400w.jpg   600w,
+                img/hero_800w.jpg  1200w,
+                img/hero_1200w.jpg 1800w
+              " />
+          <img src="img/hero_800w.jpg" class="hero-image" alt="me" />
+        </picture>
+      </div>
+      <h1>Hi! 👋 I'm Lochie</h1>
+      <p>
+        More formally Lachlan Bradford.
+      </p>
+      <p>
+        I'm a front-end developer who strives to unlock the full potential of
+        UI.
+      </p>
+      <div class="links">
+        <div>
+          <a href="resume.txt" target="_blank" rel="noopener noreferrer">resume.txt</a>
+          /
+          <a href="resume.pdf" target="blank" rel="noopener noreferrer">resume.pdf</a>
+          /
+          <a href="https://docs.google.com/document/d/1ZlfNiCx3Zq2jqw1aCa44Bks10tqLoHfaXmkOwCyqfEw/edit?usp=sharing"
+            target="blank" rel="noopener noreferrer">google docs</a>
+        </div>
+        <div>
+          <a href="https://github.com/maladr0it" target="_blank" rel="noopener noreferrer">Github</a>
+          /
+          <a href="https://www.linkedin.com/in/lachlan-bradford-44556487/" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <address>
+          <a href="mailto: bradford.lachlan@gmail.com" target="_blank"
+            rel="noopener noreferrer">bradford.lachlan@gmail.com</a>
+        </address>
+      </div>
+      <h2 class="section-heading">Contents</h2>
+      <nav class="contents">
+        <ul>
+          <li><a href="#me">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="me">
+      <h2 class="section-heading">About Me</h2>
+      <p>
+        I love making beautiful, responsive web-applications. As a developer
+        with strong UX experience, I am driven to produce apps that feel
+        natural to use, are of high-performance and inspire delight in the
+        user.
+      </p>
+      <p>
+        I am an active participant in the web-development community,
+        participating online via
+        <a href="https://www.reactiflux.com/" target="_blank" rel="noopener noreferrer">Reactiflux</a>
+        as well as in local meetups and hackathons in Tokyo.
+      </p>
+      <p>
+        An avid traveller, I enjoy travelling the world for inspiration. My
+        hobbies include calligraphy, running and flim critique. I'm currently
+        reading David Foster Wallace's
+        <a href="https://en.wikipedia.org/wiki/Infinite_Jest" target="_blank" rel="noopener noreferrer"><em>Infinite
+            Jest</em></a>, and am jamming to
+        <a href="https://soundcloud.com/jorjasmith" target="_blank" rel="noopener noreferrer">Jorja Smith</a>
+        in my coding sessions.
+      </p>
+    </section>
+    <section id="experience">
+      <h2 class="section-heading">Experience</h2>
+      <p>
+        For more information, please see my
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>.
+      </p>
+      <ul class="job-list">
+        <li>
+          <header class="job-header">
+            <picture class="job-logo-container">
+              <source type="image/webp" srcset="img/indeed_logo_128.webp" />
+              <img src="img/indeed_logo_128.png" class="job-logo" alt="Indeed logo" />
+            </picture>
+            <div>
+              <h3 class="job-employer">Indeed - Tokyo</h3>
+              <p class="job-title">Design Technologist</p>
+            </div>
+          </header>
+          <div class="job-description">
+            <p>
+              I work closely with designers and product managers to create
+              rapid proof of concept prototypes. These are subject to
+              user-testing, live A/B testing and eventually transitioned to
+              stable, production-ready code.
+            </p>
+            <p>
+              I am fortunate enough to be using a variety of cutting-edge
+              technologies, including React Hooks API, CSS-in-JS and GraphQL.
+            </p>
+          </div>
+        </li>
+        <li>
+          <header class="job-header">
+            <picture class="job-logo-container">
+              <source type="image/webp" srcset="img/tabiko_logo_128.webp" />
+              <img src="img/tabiko_logo_128.png" class="job-logo" alt="Tabiko logo" />
+            </picture>
+            <div>
+              <h3 class="job-employer">Tabiko.ai - Tokyo</h3>
+              <p class="job-title">Front-End Developer</p>
+            </div>
+          </header>
+          <div class="job-description">
+            <p>
+              Here I built a one-to-many chat application to handle many
+              thousands of customer interactions at Tabiko.ai. It offers a
+              high performance UI to manage payments, itineraries and
+              travel-related search.
+            </p>
+            <p>
+              I introduced practices such as Test-Driven-Development and
+              code-reviews to bring the engineering team to new levels of
+              productivity.
+            </p>
+          </div>
+        </li>
+        <li>
+          <header class="job-header">
+            <picture class="job-logo-container">
+              <source type="image/webp" srcset="img/fusion_logo_128.webp" />
+              <img src="img/fusion_logo_128.png" class="job-logo" alt="Fusion Systems logo" />
+            </picture>
+            <div>
+              <h3 class="job-employer">Fusion Systems - Tokyo</h3>
+              <p class="job-title">Front-End Developer</p>
+            </div>
+          </header>
+          <div class="job-description">
+            <p>
+              Here I helped build <em>Dimare</em>, a work-shift management
+              software for several restaurant chains in South-East-Asia. I was
+              responsible for the UX vision for the product, working alongside
+              our clients to identify their use-cases and pain-points.
+            </p>
+            <p>
+              I worked with a team of six developers, learning about advanced
+              state management, agile methodology and javascript
+              best-practices from my mentor.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="skills">
+      <h2 class="section-heading">Skills</h2>
+      <ul>
+        <li>
+          <h3>React.js</h3>
+          <p>
+            Declarative design, reusable components, the virtual DOM, enough
+            said. An all-around awesome framework that has fundamentally
+            changed my workflow.
+          </p>
+        </li>
+        <li>
+          <h3>Redux</h3>
+          <p>
+            A powerful implementation of Flux architecture and my go-to answer
+            to managing state complexity. App persistance and time-travel
+            debugging are the cherry on top.
+          </p>
+        </li>
+        <li>
+          <h3>Firebase</h3>
+          <p>
+            Real-time delivery of data with Firebase's
+            <a href="https://firebase.google.com/docs/firestore/" target="_blank" rel="noopener noreferrer">Cloud
+              Firestore</a>
+            has proven very useful in my work at tabiko.ai, where many
+            thousands of customer interactions must be observable live as they
+            unfold.
+          </p>
+        </li>
+        <li>
+          <h3>Node.js</h3>
+          <p>
+            Event-driven architecture, scalability and most importantly NPM
+            make this my favourite back-end environment. Both Fusion Systems
+            and tabiko.ai's high I/O services have proven especially suited to
+            this.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
