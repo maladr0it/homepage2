@@ -71,7 +71,11 @@
         display: flex;
         align-items: center;
       }
-      .job-logo {
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+      .logo {
         height: 3rem;
         margin-right: 1rem;
       }
@@ -261,11 +265,14 @@
         <ul class="job-list">
           <li>
             <header class="job-header">
-              <img
-                class="job-logo"
-                src="img/indeed_logo_128.png"
-                alt="Indeed logo"
-              />
+              <picture class="logo-container">
+                <source type="image/webp" srcset="img/indeed_logo_128.webp" />
+                <img
+                  src="img/indeed_logo_128.png"
+                  class="logo"
+                  alt="Indeed logo"
+                />
+              </picture>
               <div>
                 <h3 class="job-employer">Indeed - Tokyo</h3>
                 <p class="job-title">Design Technologist</p>
@@ -287,11 +294,14 @@
           </li>
           <li>
             <header class="job-header">
-              <img
-                class="job-logo"
-                src="img/tabiko_logo_128.png"
-                alt="Tabiko.ai logo"
-              />
+              <picture class="logo-container">
+                <source type="image/webp" srcset="img/tabiko_logo_128.webp" />
+                <img
+                  src="img/tabiko_logo_128.png"
+                  class="logo"
+                  alt="Tabiko logo"
+                />
+              </picture>
               <div>
                 <h3 class="job-employer">Tabiko.ai - Tokyo</h3>
                 <p class="job-title">Front-End Developer</p>
@@ -313,11 +323,14 @@
           </li>
           <li>
             <header class="job-header">
-              <img
-                class="job-logo"
-                src="img/fusion_logo_128.png"
-                alt="Fusion Systems logo"
-              />
+              <picture class="logo-container">
+                <source type="image/webp" srcset="img/fusion_logo_128.webp" />
+                <img
+                  src="img/fusion_logo_128.png"
+                  class="logo"
+                  alt="Fusion Systems logo"
+                />
+              </picture>
               <div>
                 <h3 class="job-employer">Fusion Systems - Tokyo</h3>
                 <p class="job-title">Front-End Developer</p>
