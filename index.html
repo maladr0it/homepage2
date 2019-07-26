@@ -60,24 +60,30 @@
         top: 50%;
         transform: translateY(-50%);
       }
-      .job-list {
+      .icon-list {
         list-style: none;
         padding-left: 0;
       }
-      .job-list li {
+      .icon-list li {
         margin-bottom: 2rem;
       }
-      .job-header {
+      .icon-list-item-header {
         display: flex;
         align-items: center;
       }
-      .logo-container {
+      .icon-list-item-description {
+        margin-left: 4rem;
+      }
+      .icon-list-icon-container {
         display: flex;
         align-items: center;
-      }
-      .logo {
-        height: 3rem;
         margin-right: 1rem;
+      }
+      .icon-list-icon {
+        width: 3rem;
+      }
+      .skill-name {
+        margin: 0;
       }
       .job-employer {
         margin-top: 0;
@@ -86,9 +92,6 @@
       .job-title {
         margin: 0;
         font-style: italic;
-      }
-      .job-description {
-        margin-left: 4rem;
       }
     </style>
   </head>
@@ -211,46 +214,74 @@
       </section>
       <section id="skills">
         <h2 class="section-heading">Skills</h2>
-        <ul>
+        <ul class="icon-list">
           <li>
-            <h3>React.js <i class="devicon-react-original colored"></i></h3>
-            <p>
-              Declarative design, reusable components, the virtual DOM, enough
-              said. An all-around awesome framework that has fundamentally
-              changed my workflow.
-            </p>
+            <header class="icon-list-item-header">
+              <div class="icon-list-icon-container">
+                <img src="img/react_icon.svg" class="icon-list-icon" />
+              </div>
+              <h3 class="skill-name">React.js</h3>
+            </header>
+            <div class="icon-list-item-description">
+              <p>
+                Declarative design, reusable components, the virtual DOM, enough
+                said. An all-around awesome framework that has fundamentally
+                changed my workflow.
+              </p>
+            </div>
           </li>
           <li>
-            <h3>Redux</h3>
-            <p>
-              A powerful implementation of Flux architecture and my go-to answer
-              to managing state complexity. App persistance and time-travel
-              debugging are the cherry on top.
-            </p>
+            <header class="icon-list-item-header">
+              <div class="icon-list-icon-container">
+                <img src="img/redux_icon.svg" class="icon-list-icon" />
+              </div>
+              <h3 class="skill-name">Redux</h3>
+            </header>
+            <div class="icon-list-item-description">
+              <p>
+                A powerful implementation of Flux architecture and my go-to
+                answer to managing state complexity. App persistance and
+                time-travel debugging are the cherry on top.
+              </p>
+            </div>
           </li>
           <li>
-            <h3>Firebase</h3>
-            <p>
-              Real-time delivery of data with Firebase's
-              <a
-                href="https://firebase.google.com/docs/firestore/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Cloud Firestore</a
-              >
-              has proven very useful in my work at tabiko.ai, where many
-              thousands of customer interactions must be observable live as they
-              unfold.
-            </p>
+            <header class="icon-list-item-header">
+              <div class="icon-list-icon-container">
+                <img src="img/firebase_icon.svg" class="icon-list-icon" />
+              </div>
+              <h3 class="skill-name">Firebase</h3>
+            </header>
+            <div class="icon-list-item-description">
+              <p>
+                Real-time delivery of data with Firebase's
+                <a
+                  href="https://firebase.google.com/docs/firestore/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Cloud Firestore</a
+                >
+                has proven very useful in my work at tabiko.ai, where many
+                thousands of customer interactions must be observable live as
+                they unfold.
+              </p>
+            </div>
           </li>
           <li>
-            <h3>Node.js</h3>
-            <p>
-              Event-driven architecture, scalability and most importantly NPM
-              make this my favourite back-end environment. Both Fusion Systems
-              and tabiko.ai's high I/O services have proven especially suited to
-              this.
-            </p>
+            <header class="icon-list-item-header">
+              <div class="icon-list-icon-container">
+                <img src="img/nodejs_icon.svg" class="icon-list-icon" />
+              </div>
+              <h3 class="skill-name">Node.js</h3>
+            </header>
+            <div class="icon-list-item-description">
+              <p>
+                Event-driven architecture, scalability and most importantly NPM
+                make this my favourite back-end environment. Both Fusion Systems
+                and tabiko.ai's high I/O services have proven especially suited
+                to this.
+              </p>
+            </div>
           </li>
         </ul>
       </section>
@@ -262,14 +293,14 @@
             >resume</a
           >.
         </p>
-        <ul class="job-list">
+        <ul class="icon-list">
           <li>
-            <header class="job-header">
-              <picture class="logo-container">
+            <header class="icon-list-item-header">
+              <picture class="icon-list-icon-container">
                 <source type="image/webp" srcset="img/indeed_logo_128.webp" />
                 <img
                   src="img/indeed_logo_128.png"
-                  class="logo"
+                  class="icon-list-icon"
                   alt="Indeed logo"
                 />
               </picture>
@@ -278,7 +309,7 @@
                 <p class="job-title">Design Technologist</p>
               </div>
             </header>
-            <div class="job-description">
+            <div class="icon-list-item-description">
               <p>
                 I work closely with designers and product managers to create
                 rapid proof of concept prototypes. These are subject to
@@ -293,12 +324,12 @@
             </div>
           </li>
           <li>
-            <header class="job-header">
-              <picture class="logo-container">
+            <header class="icon-list-item-header">
+              <picture class="icon-list-icon-container">
                 <source type="image/webp" srcset="img/tabiko_logo_128.webp" />
                 <img
                   src="img/tabiko_logo_128.png"
-                  class="logo"
+                  class="icon-list-icon"
                   alt="Tabiko logo"
                 />
               </picture>
@@ -307,7 +338,7 @@
                 <p class="job-title">Front-End Developer</p>
               </div>
             </header>
-            <div class="job-description">
+            <div class="icon-list-item-description">
               <p>
                 Here I built a one-to-many chat application to handle many
                 thousands of customer interactions at Tabiko.ai. It offers a
@@ -322,12 +353,12 @@
             </div>
           </li>
           <li>
-            <header class="job-header">
-              <picture class="logo-container">
+            <header class="icon-list-item-header">
+              <picture class="icon-list-icon-container">
                 <source type="image/webp" srcset="img/fusion_logo_128.webp" />
                 <img
                   src="img/fusion_logo_128.png"
-                  class="logo"
+                  class="icon-list-icon"
                   alt="Fusion Systems logo"
                 />
               </picture>
@@ -336,7 +367,7 @@
                 <p class="job-title">Front-End Developer</p>
               </div>
             </header>
-            <div class="job-description">
+            <div class="icon-list-item-description">
               <p>
                 Here I helped build <em>Dimare</em>, a work-shift management
                 software for several restaurant chains in South-East-Asia. I was
