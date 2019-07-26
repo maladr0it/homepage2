@@ -2,7 +2,7 @@
 
 ### Web Developer
 
-lochie.xyz/
+https://www.lochie.xyz
 +81 50 5532 2768
 bradford.lachlan@gmail.com
 
@@ -67,4 +67,3 @@ bradford.lachlan@gmail.com
 - Built work-shift management software for several restaurant chains in South East Asia
 - Used React + Redux for advanced application state management
 - Team of 6 developers
-
