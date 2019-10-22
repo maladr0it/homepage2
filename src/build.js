@@ -15,6 +15,7 @@ const minified = minifier(html, {
   collapseWhitespace: true,
   decodeEntities: true,
   minifyCSS: true,
+  minifyJS: true,
   removeAttributeQuotes: true,
   sortAttributes: true,
   sortClassName: true
