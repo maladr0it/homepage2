@@ -22,29 +22,40 @@
       type="image/x-icon"
       href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVR42mO4yHDxPyWYYRgawEAAjBowMgwYgXkBAAP/+NBa7C6nAAAAAElFTkSuQmCC"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500" />
     <style>
       body {
         margin: 0;
-        color: #222;
-        background-color: #fff;
-        font-family: "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", Helvetica, Arial,
-          sans-serif;
+        color: #0e2065;
+        background-color: #f0ede5;
+        font-family: "Google Sans", Roboto, Arial, sans-serif;
         line-height: 1.7;
-        font-weight: 300;
+        font-weight: 400;
       }
 
-      h1,
+      h1 {
+        font-weight: 500;
+      }
+
       h2,
       h3 {
-        font-weight: 300;
+        font-weight: 500;
       }
 
       a {
-        color: #d100d1;
+        color: #0e2065;
       }
 
       address {
         font-style: normal;
+      }
+
+      main {
+        margin-top: 2.5rem;
+      }
+
+      section:not(:first-child) {
+        margin-top: 2.5rem;
       }
 
       .page {
@@ -53,29 +64,25 @@
         margin: auto;
       }
 
-      .highlight {
-        background-color: #fffbde;
-      }
-
       .links > * {
         margin: 0.6em 0;
       }
 
       .section-heading {
-        border-bottom: 1px solid #6f6f6f;
+        border-bottom: 1px solid #0e2065;
       }
 
       .hero-image-container {
         position: relative;
         margin: 0 -0.25rem;
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
         border-radius: 2px;
       }
 
       .hero-image-placeholder {
         padding-top: 70%;
-        background-color: #f2f2f2;
+        background-color: #fff;
       }
 
       .hero-image {
@@ -91,20 +98,22 @@
         padding-left: 0;
       }
 
-      .job-list li:not(:last-child) {
-        margin-bottom: 2rem;
-        border-bottom: 1px solid #f2f2f2;
+      .job-list li:not(:first-child) {
+        margin-top: 2.5rem;
       }
 
       .job-header {
         display: flex;
         align-items: center;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
       }
 
       .job-logo-container {
         display: flex;
         align-items: center;
-        margin-right: 1rem;
+        margin: 0 1rem;
       }
 
       .job-logo {
@@ -113,8 +122,6 @@
 
       .job-employer {
         margin: 0;
-        display: inline-block;
-        background-color: #e6fff6;
       }
 
       .job-title {
@@ -123,7 +130,7 @@
       }
 
       .job-description {
-        margin-left: 4rem;
+        margin-left: 1rem;
       }
     </style>
   </head>
@@ -145,7 +152,7 @@
             <img src="img/hero_800w.jpg" class="hero-image" alt="me" />
           </picture>
         </div>
-        <h1><span class="highlight">Hi! 👋 I'm Lochie</span></h1>
+        <h1>Hi! 👋 I'm Lochie</h1>
         <p>
           More formally Lachlan Bradford.
         </p>
@@ -244,13 +251,13 @@
               </header>
               <div class="job-description">
                 <p>
-                  I work closely with designers and product managers to create rapid proof of concept
-                  prototypes. These are subject to user-testing, live A/B testing and eventually
-                  transitioned to stable, production-ready code.
+                  I work closely with designers and product managers to create rapid proof of
+                  concept prototypes. These are subject to user-testing, live A/B testing and
+                  eventually transitioned to stable, production-ready code.
                 </p>
                 <p>
-                  I am fortunate enough to be using a variety of cutting-edge technologies, including
-                  React Hooks API, CSS-in-JS and GraphQL.
+                  I am fortunate enough to be using a variety of cutting-edge technologies,
+                  including React Hooks API, CSS-in-JS and GraphQL.
                 </p>
               </div>
             </li>
@@ -272,8 +279,8 @@
                   itineraries and travel-related search.
                 </p>
                 <p>
-                  I introduced practices such as Test-Driven-Development and code-reviews to bring the
-                  engineering team to new levels of productivity.
+                  I introduced practices such as Test-Driven-Development and code-reviews to bring
+                  the engineering team to new levels of productivity.
                 </p>
               </div>
             </li>
@@ -292,7 +299,8 @@
                 <p>
                   Here I helped build <em>Dimare</em>, a work-shift management software for several
                   restaurant chains in South-East-Asia. I was responsible for the UX vision for the
-                  product, working alongside our clients to identify their use-cases and pain-points.
+                  product, working alongside our clients to identify their use-cases and
+                  pain-points.
                 </p>
                 <p>
                   I worked with a team of six developers, learning about advanced state management,
