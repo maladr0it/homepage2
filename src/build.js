@@ -10,7 +10,7 @@ const exists = path => {
   }
 };
 
-const html = fs.readFileSync(`src/index.html`, "utf-8");
+const html = fs.readFileSync("src/index.html", "utf-8");
 const minified = minifier(html, {
   collapseWhitespace: true,
   decodeEntities: true,
@@ -25,3 +25,5 @@ if (!exists("docs")) {
   fs.mkdirSync("docs");
 }
 fs.writeFileSync("docs/index.html", minified);
+fs.copyFileSync("src/resume.txt", "docs/resume.txt");
+fs.copyFileSync("src/resume.pdf", "docs/resume.pdf");
