@@ -39,10 +39,10 @@ bradford.lachlan@gmail.com
 
 #### Design Technologist
 
-	- Work closely with designers and product managers to launch experiments in the form of prototypes and A/B tests
-	- Contribute to the company-wide design system and component library with an emphasis on accessibility
-	- Train full-stack engineers in modern front-end practices with workshops and in pairing sessions
-	- Using a variety of new technologies, including React concurrent rendering, CSS-in-JS solutions and GraphQL
+- Work closely with designers and product managers on cross-functional teams to launch experiments in the form of prototypes and A/B tests
+- Contribute to the company-wide design system and component library with an emphasis on accessibility
+- Train full-stack engineers in modern front-end practices with workshops and in pairing sessions
+- Use a variety of new technologies, including React concurrent rendering, CSS-in-JS solutions and GraphQL
 
 ### JUL 2018 - AUG 2018: Kokus.ai - Tokyo
 
