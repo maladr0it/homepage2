@@ -39,10 +39,10 @@ bradford.lachlan@gmail.com
 
 #### Design Technologist
 
-- Working closely with designers and product managers to create rapid proof of concept prototypes
-- Prototypes are subject to user-testing, live A/B testing and eventually transitioned to stable, production-ready code
-- Using a variety of cutting-edge technologies, including React Hooks API, CSS-in-JS solutions and GraphQL
-- Train full-stack engineers in modern front-end practices with workshops and in pairing sessions
+	- Work closely with designers and product managers to launch experiments in the form of prototypes and A/B tests
+	- Contribute to the company-wide design system and component library with an emphasis on accessibility
+	- Train full-stack engineers in modern front-end practices with workshops and in pairing sessions
+	- Using a variety of new technologies, including React concurrent rendering, CSS-in-JS solutions and GraphQL
 
 ### JUL 2018 - AUG 2018: Kokus.ai - Tokyo
 
@@ -50,14 +50,14 @@ bradford.lachlan@gmail.com
 
 - Built a chat-bot interface in a 1-month timeframe
 - Formatted training data for the chat-bot
-- Used React + Redux, IBM Watson and Google DialogueFlow
+- Used React + Redux, IBM Watson, and Google DialogueFlow
 
 ### NOV 2017 - JUN 2018: Tabiko.ai - Tokyo
 
-#### Product Owner
+#### Front-End Developer
 
 - Built one-to-many chat application for customer communication
-- Responsible for database design and web application
+- Responsible for database design and the front-end
 - Used React + Redux, and Firebase real-time database
 
 ### SEP 2016 - NOV 2017: FUSION SYSTEMS - Tokyo
@@ -65,5 +65,4 @@ bradford.lachlan@gmail.com
 #### Front-End Developer
 
 - Built work-shift management software for several restaurant chains in South East Asia
-- Used React + Redux for advanced application state management
-- Team of 6 developers
+- Used React + Redux
