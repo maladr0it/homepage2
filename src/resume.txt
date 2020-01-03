@@ -1,0 +1,68 @@
+# Lachlan Bradford
+
+### Web Developer
+
+https://www.lochie.xyz
++81 50 5532 2768
+bradford.lachlan@gmail.com
+
+---
+
+## Skills
+
+- Javascript
+- Typescript
+- React
+- Redux
+- React Native
+- GraphQL
+- Webpack
+- Node.js
+- Express
+- Firebase
+- Git
+- UX design
+
+---
+
+## Education
+
+### MAR 2011 - JUL 2015: MONASH UNIVERSITY - Australia
+
+#### Bachelor of Engineering (Honors)
+
+---
+
+## Employment
+
+### AUG 2018 - PRESENT: Indeed - Tokyo
+
+#### Design Technologist
+
+	- Work closely with designers and product managers on cross-functional teams to launch experiments in the form of prototypes and A/B tests
+	- Contribute to the company-wide design system and component library with an emphasis on accessibility
+	- Train full-stack engineers in modern front-end practices with workshops and in pairing sessions
+	- Use a variety of new technologies, including React concurrent rendering, CSS-in-JS solutions and GraphQL
+
+### JUL 2018 - AUG 2018: Kokus.ai - Tokyo
+
+#### Front-End Developer (Contractor)
+
+- Built a chat-bot interface in a 1-month timeframe
+- Formatted training data for the chat-bot
+- Used React + Redux, IBM Watson, and Google DialogueFlow
+
+### NOV 2017 - JUN 2018: Tabiko.ai - Tokyo
+
+#### Front-End Developer
+
+- Built one-to-many chat application for customer communication
+- Responsible for database design and the front-end
+- Used React + Redux, and Firebase real-time database
+
+### SEP 2016 - NOV 2017: FUSION SYSTEMS - Tokyo
+
+#### Front-End Developer
+
+- Built work-shift management software for several restaurant chains in South East Asia
+- Used React + Redux
