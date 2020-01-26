@@ -28,7 +28,6 @@
       :root {
         --color-text: #474a7b;
         --color-background: #00ffc2;
-        --color-transparent: rgba(71, 74, 123, 0.1);
       }
 
       body {
@@ -106,9 +105,6 @@
       .job-header {
         display: flex;
         align-items: center;
-        padding: 0.5rem;
-        background: var(--color-transparent);
-        border-radius: 4px;
       }
 
       .job-logo-container {
@@ -125,16 +121,13 @@
         width: 3rem;
       }
 
-      .job-employer {
-        margin: 0;
-      }
-
       .job-title {
         margin: 0;
       }
 
-      .job-description {
-        margin: 0 0.5rem;
+      .job-period {
+        font-size: 0.875rem;
+        opacity: 0.7;
       }
     </style>
   </head>
@@ -231,11 +224,12 @@
                   <img src="img/indeed_logo_128.png" class="job-logo" alt="Indeed logo" />
                 </picture>
                 <div>
-                  <h3 class="job-employer">Indeed - Tokyo</h3>
-                  <p class="job-title">Design Technologist</p>
+                  <h3 class="job-title">Design Technologist</h3>
+                  <div>Indeed · Tokyo</div>
+                  <div class="job-period">Jul 2018 – Present</div>
                 </div>
               </header>
-              <div class="job-description">
+              <div>
                 <p>
                   I work closely with designers and product managers on cross-functional teams to launch experiments in
                   the form of prototypes and A/B tests.
@@ -257,11 +251,12 @@
                   <img src="img/tabiko_logo_128.png" class="job-logo" alt="Tabiko logo" />
                 </picture>
                 <div>
-                  <h3 class="job-employer">Tabiko.ai - Tokyo</h3>
-                  <p class="job-title">Front-End Developer</p>
+                  <h3 class="job-title">Front-End Developer</h3>
+                  <div>Tabiko.ai · Tokyo</div>
+                  <div class="job-period">Nov 2017 – Jul 2018</div>
                 </div>
               </header>
-              <div class="job-description">
+              <div>
                 <p>
                   Here I built a one-to-many chat application to handle many thousands of customer interactions at
                   Tabiko.ai. It offers a high performance UI to manage payments, itineraries and travel-related search.
@@ -279,11 +274,12 @@
                   <img src="img/fusion_logo_128.png" class="job-logo" alt="Fusion Systems logo" />
                 </picture>
                 <div>
-                  <h3 class="job-employer">Fusion Systems - Tokyo</h3>
-                  <p class="job-title">Front-End Developer</p>
+                  <h3 class="job-title">Front-end Developer</h3>
+                  <div>Fusion Systems · Tokyo</div>
+                  <div class="job-period">Sep 2016 – Nov 2017</div>
                 </div>
               </header>
-              <div class="job-description">
+              <div>
                 <p>
                   Here I helped build <em>Dimare</em>, a work-shift management software for several restaurant chains in
                   South-East-Asia. I worked closely with designers to realize the UX vision for the product, while also
