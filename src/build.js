@@ -24,6 +24,7 @@ const minified = minifier(html, {
 if (!exists("docs")) {
   fs.mkdirSync("docs");
 }
-fs.writeFileSync("docs/index.html", minified);
+// fs.writeFileSync("docs/index.html", minified);
+fs.copyFileSync("src/index.html", "docs/index.html");
 fs.copyFileSync("src/resume.txt", "docs/resume.txt");
 fs.copyFileSync("src/resume.pdf", "docs/resume.pdf");
