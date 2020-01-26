@@ -17,7 +17,7 @@
       name="description"
       content="Lachlan Bradford aka Lochie, a front end web-developer specializing in React. Produces rapid prototypes for Indeed as a Design Technologist."
     />
-    <title>Lochie 👋</title>
+    <title>Lochie 🦄</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -25,10 +25,16 @@
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap" />
     <style>
+      :root {
+        --color-text: #474a7b;
+        --color-background: #00ffc2;
+        --color-transparent: rgba(71, 74, 123, 0.1);
+      }
+
       body {
         margin: 0;
-        color: #0e2065;
-        background-color: #f0ede5;
+        color: var(--color-text);
+        background: var(--color-background);
         font-family: "Google Sans", Roboto, Arial, sans-serif;
         line-height: 1.7;
         font-weight: 400;
@@ -41,7 +47,7 @@
       }
 
       a {
-        color: #0e2065;
+        color: var(--color-text);
       }
 
       address {
@@ -58,7 +64,7 @@
 
       .page {
         max-width: 40rem;
-        padding: 0.25rem 0.75rem;
+        padding: 0.5rem 0.75rem;
         margin: auto;
       }
 
@@ -66,28 +72,24 @@
         margin: 0.6em 0;
       }
 
-      .section-heading {
-        border-bottom: 1px solid #0e2065;
-      }
-
       .hero-image-container {
         position: relative;
         margin: 0 -0.25rem;
         overflow: hidden;
-        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
-        border-radius: 2px;
+        border: 2px solid var(--color-text);
+        border-radius: 4px;
       }
 
       .hero-image-placeholder {
         padding-top: 70%;
-        background-color: #fff;
+        background: #fff;
       }
 
       .hero-image {
-        display: block;
-        width: 100%;
         position: absolute;
+        width: 100%;
         top: 50%;
+        display: block;
         transform: translateY(-50%);
       }
 
@@ -97,22 +99,25 @@
       }
 
       .job-list li:not(:first-child) {
-        margin-top: 2.5rem;
+        margin-top: 2rem;
       }
 
       .job-header {
         display: flex;
         align-items: center;
-        padding: 0.5rem 1rem;
-        background-color: #fff;
+        padding: 0.5rem;
+        background: var(--color-transparent);
         border-radius: 4px;
-        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.26);
       }
 
       .job-logo-container {
         display: flex;
         align-items: center;
         margin-right: 1rem;
+        padding: 0.5rem;
+        border: 2px solid var(--color-text);
+        border-radius: 4px;
+        background: #fff;
       }
 
       .job-logo {
@@ -157,12 +162,12 @@
             rel="noopener noreferrer"
             >Design Technologist</a
           >
-          at Indeed who strives to unlock the full potential of UI.
+          at Indeed who strives to unlock the full potential of UI.&nbsp;🦄
         </p>
       </header>
       <main>
         <section id="links">
-          <h2 class="section-heading">Links</h2>
+          <h2>Links</h2>
           <div class="links">
             <div>
               <a href="resume.txt" target="_blank" rel="noopener noreferrer">resume.txt</a>
@@ -191,7 +196,7 @@
           </div>
         </section>
         <section id="me">
-          <h2 class="section-heading">About Me</h2>
+          <h2>About Me</h2>
           <p>
             I love making beautiful, responsive web-applications. As a developer with strong UX experience, I am driven
             to produce apps that feel natural to use and inspire delight in the user.
@@ -212,7 +217,7 @@
           </p>
         </section>
         <section id="experience">
-          <h2 class="section-heading">Experience</h2>
+          <h2>Experience</h2>
           <p>
             For more information, please see my
             <a href="resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>.
