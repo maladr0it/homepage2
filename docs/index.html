@@ -288,11 +288,13 @@
 
     <template id="theme-picker">
       <style>
+        :host {
+          display: inline-block;
+        }
         * {
           box-sizing: border-box;
         }
         form {
-          display: inline-block;
           max-width: 100%;
           padding: 0.25rem 0;
           color: #fff;
@@ -396,8 +398,8 @@
             itemList.appendChild(itemTemplate.content);
           }
 
-          this.root = this.attachShadow({ mode: "open" });
-          this.root.appendChild(node);
+          this.attachShadow({ mode: "open" });
+          this.shadowRoot.appendChild(node);
         }
 
         themes = [
