@@ -35,6 +35,7 @@
       ::after {
         box-sizing: inherit;
       }
+
       body {
         margin: 0;
         box-sizing: border-box;
@@ -62,17 +63,14 @@
       section:not(:first-child) {
         margin-top: 2.5rem;
       }
-
       .page {
         max-width: 40rem;
         padding: 0.5rem 0.75rem;
         margin: auto;
       }
-
       .links > * {
         margin: 0.6em 0;
       }
-
       .hero-image-container {
         position: relative;
         margin: 0 -0.25rem;
@@ -92,74 +90,6 @@
         display: block;
         transform: translateY(-50%);
       }
-
-      .theme-picker {
-        visibility: hidden;
-        display: inline-block;
-        max-width: 100%;
-        padding: 0.25rem 0;
-        border-radius: 8px;
-        color: #fff;
-        background: #000;
-      }
-      .theme-picker-title {
-        margin: 0;
-        font-size: 1rem;
-        font-weight: 500;
-        margin-left: 0.5rem;
-      }
-      .theme-list-container {
-        display: flex;
-        align-items: center;
-        /* allocate space for items once they load in */
-        height: 5rem;
-        overflow-x: auto;
-      }
-      .theme-picker ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0 0.5rem;
-      }
-      .theme-picker ul > li {
-        position: relative;
-        width: 4rem;
-        height: 4rem;
-        flex-shrink: 0;
-      }
-      .theme-picker ul label {
-        cursor: pointer;
-      }
-      .theme-picker-choice:not(:first-child) {
-        margin-left: -2px;
-      }
-      .theme-picker input[type="radio"] {
-        position: absolute;
-        opacity: 0;
-      }
-      .theme-choice-label {
-        position: absolute;
-        opacity: 0;
-      }
-      .theme-preview {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        border: 2px solid black;
-      }
-      .theme-preview-bg {
-        height: 3rem;
-      }
-      .theme-preview-text {
-        flex: 1;
-      }
-      .theme-picker input[type="radio"]:checked ~ .theme-preview {
-        outline: 4px solid white;
-        position: absolute;
-        z-index: 100;
-      }
-
       .job-list {
         list-style: none;
         padding-left: 0;
@@ -223,12 +153,7 @@
         </p>
       </header>
       <main>
-        <form id="theme-picker" class="theme-picker">
-          <h2 class="theme-picker-title">Theme</h2>
-          <div class="theme-list-container">
-            <ul id="theme-list"></ul>
-          </div>
-        </form>
+        <theme-picker></theme-picker>
         <section id="links">
           <h2>Links</h2>
           <div class="links">
@@ -365,51 +290,141 @@
       </main>
     </div>
 
-    <script>
-      const themes = {
-        themeA: { background: "#fff", text: "#000" },
-        themeB: { background: "#bd2742", text: "#e2e9fe" },
-        themeC: { background: "#00ffc2", text: "#474a7b" },
-        themeD: { background: "#c8d5ff", text: "#da1135" },
-        themeE: { background: "#ffb500", text: "#000" },
-        themeF: { background: "#221f2b", text: "#ff5f46" },
-        themeG: { background: "#326366", text: "#ffaaa5" }
-      };
-      const themePickerEl = document.getElementById("theme-picker");
-      const themeListEl = themePickerEl.querySelector("#theme-list");
-
-      for (let [name, theme] of Object.entries(themes)) {
-        const template = `
-        <li>
-          <label>
-            <input type="radio" name="theme" data-theme=${name} />
-            <span class="theme-choice-label">${name}</span>
-            <div class="theme-preview">
-              <div class="theme-preview-bg" style="background: ${theme.background};"></div>
-              <div class="theme-preview-text" style="background: ${theme.text};"></div>
-            </div>
-          </label>
-        </li>
-        `;
-        themeListEl.insertAdjacentHTML("beforeend", template);
-      }
-      const themeInputEls = themePickerEl.querySelectorAll(`input[type="radio"]`);
-
-      function handleThemeChange(event) {
-        if (event.target.checked) {
-          const themeName = event.target.dataset.theme;
-          const theme = themes[themeName];
-          document.documentElement.style.setProperty("--color-background", theme.background);
-          document.documentElement.style.setProperty("--color-text", theme.text);
+    <template id="theme-picker">
+      <style>
+        :host {
+          box-sizing: border-box;
+          display: inline-block;
+          max-width: 100%;
+          padding: 0.25rem 0;
+          border-radius: 4px;
+          color: #fff;
+          background: #000;
         }
+        * {
+          box-sizing: inherit;
+        }
+        h2 {
+          margin: 0;
+          font-size: 1rem;
+          font-weight: 500;
+          margin-left: 0.5rem;
+        }
+        .list-container {
+          display: flex;
+          overflow-x: auto;
+        }
+        ul {
+          display: flex;
+          list-style: none;
+          margin: 0.5rem 0;
+          padding: 0 0.5rem;
+        }
+        li {
+          position: relative;
+          width: 4rem;
+          height: 4rem;
+        }
+        label {
+          cursor: pointer;
+        }
+        input {
+          position: absolute;
+          z-index: -1;
+        }
+        .label-text {
+          position: absolute;
+          z-index: -1;
+        }
+        .preview {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          border: 2px solid black;
+        }
+        .preview:not(:first-child) {
+          margin-left: -2px;
+        }
+        .preview-background {
+          flex: 3;
+        }
+        .preview-text {
+          flex: 1;
+        }
+        input:checked ~ .preview {
+          position: absolute;
+          z-index: 1;
+          outline: 4px solid white;
+        }
+      </style>
+
+      <form>
+        <h2>Theme</h2>
+        <div class="list-container">
+          <ul id="list"></ul>
+        </div>
+      </form>
+    </template>
+
+    <template id="theme-item">
+      <li>
+        <label>
+          <input type="radio" name="theme" aria-hidden="false" />
+          <span class="label-text" aria-hidden="false"></span>
+          <div class="preview">
+            <div class="preview-background"></div>
+            <div class="preview-text"></div>
+          </div>
+        </label>
+      </li>
+    </template>
+
+    <script>
+      class ThemePicker extends HTMLElement {
+        constructor() {
+          super();
+          const template = document.getElementById("theme-picker");
+          const itemTemplate = document.getElementById("theme-item");
+          const node = document.importNode(template.content, true);
+          const itemList = node.getElementById("list");
+
+          for (let i = 0; i < this.themes.length; i++) {
+            const theme = this.themes[i];
+            const itemNode = document.importNode(itemTemplate.content, true);
+            const input = itemNode.querySelector("input");
+            const label = itemNode.querySelector(".label-text");
+            const background = itemNode.querySelector(".preview-background");
+            const text = itemNode.querySelector(".preview-text");
+
+            label.innerText = theme.name;
+            background.style.background = theme.background;
+            text.style.background = theme.text;
+            if (i === 0) input.checked = true;
+
+            input.addEventListener("change", () => {
+              document.documentElement.style.setProperty("--color-background", theme.background);
+              document.documentElement.style.setProperty("--color-text", theme.text);
+            });
+            itemList.appendChild(itemNode);
+          }
+
+          this.root = this.attachShadow({ mode: "open" });
+          this.root.appendChild(node);
+        }
+
+        themes = [
+          { name: "Theme A", background: "#fff", text: "#000" },
+          { name: "Theme B", background: "#bd2742", text: "#e2e9fe" },
+          { name: "Theme C", background: "#00ffc2", text: "#474a7b" },
+          { name: "Theme D", background: "#c8d5ff", text: "#da1135" },
+          { name: "Theme E", background: "#ffb500", text: "#000" },
+          { name: "Theme F", background: "#221f2b", text: "#ff5f46" },
+          { name: "Theme G", background: "#326366", text: "#ffaaa5" }
+        ];
       }
 
-      for (input of themeInputEls) {
-        input.addEventListener("change", handleThemeChange);
-      }
-
-      themeInputEls[0].checked = true;
-      themePickerEl.style.visibility = "visible";
+      customElements.define("theme-picker", ThemePicker);
     </script>
   </body>
 </html>
