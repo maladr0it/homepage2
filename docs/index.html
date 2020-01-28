@@ -288,15 +288,15 @@
 
     <template id="theme-picker">
       <style>
-        :host {
+        * {
+          box-sizing: border-box;
+        }
+        form {
           display: inline-block;
           max-width: 100%;
           padding: 0.25rem 0;
           color: #fff;
           background: #000;
-        }
-        * {
-          box-sizing: border-box;
         }
         h2 {
           margin: 0;
@@ -361,46 +361,39 @@
       </form>
     </template>
 
-    <template id="theme-item">
-      <li>
-        <label>
-          <input type="radio" name="theme" aria-hidden="false" />
-          <span class="label-text" aria-hidden="false"></span>
-          <div class="preview">
-            <div class="preview-background"></div>
-            <div class="preview-text"></div>
-          </div>
-        </label>
-      </li>
-    </template>
-
     <script>
       class ThemePicker extends HTMLElement {
         constructor() {
           super();
           const template = document.getElementById("theme-picker");
-          const itemTemplate = document.getElementById("theme-item");
           const node = document.importNode(template.content, true);
           const itemList = node.getElementById("list");
 
           for (let i = 0; i < this.themes.length; i++) {
             const theme = this.themes[i];
-            const itemNode = document.importNode(itemTemplate.content, true);
-            const input = itemNode.querySelector("input");
-            const label = itemNode.querySelector(".label-text");
-            const background = itemNode.querySelector(".preview-background");
-            const text = itemNode.querySelector(".preview-text");
+            const itemTemplate = document.createElement("template");
+            itemTemplate.innerHTML = `
+              <li>
+                <label>
+                  <input type="radio" name="theme" aria-hidden="false" />
+                  <span class="label-text" aria-hidden="false">${theme.name}</span>
+                  <div class="preview">
+                    <div class="preview-background" style="background: ${theme.background};"></div>
+                    <div class="preview-text" style="background: ${theme.text}"></div>
+                  </div>
+                </label>
+              </li>
+            `;
 
-            label.innerText = theme.name;
-            background.style.background = theme.background;
-            text.style.background = theme.text;
-            if (i === 0) input.checked = true;
-
-            input.addEventListener("change", () => {
+            const onChange = () => {
               document.documentElement.style.setProperty("--color-background", theme.background);
               document.documentElement.style.setProperty("--color-text", theme.text);
-            });
-            itemList.appendChild(itemNode);
+            };
+
+            const input = itemTemplate.content.querySelector("input");
+            if (i === 0) input.checked = true;
+            input.addEventListener("change", onChange);
+            itemList.appendChild(itemTemplate.content);
           }
 
           this.root = this.attachShadow({ mode: "open" });
