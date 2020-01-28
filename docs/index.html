@@ -367,6 +367,15 @@
       class ThemePicker extends HTMLElement {
         constructor() {
           super();
+          this.themes = [
+            { name: "Theme A", background: "#fff", text: "#000" },
+            { name: "Theme B", background: "#bd2742", text: "#e2e9fe" },
+            { name: "Theme C", background: "#00ffc2", text: "#474a7b" },
+            { name: "Theme D", background: "#c8d5ff", text: "#da1135" },
+            { name: "Theme E", background: "#ffb500", text: "#000" },
+            { name: "Theme F", background: "#221f2b", text: "#ff5f46" },
+            { name: "Theme G", background: "#326366", text: "#ffaaa5" }
+          ];
           const template = document.getElementById("theme-picker");
           const node = document.importNode(template.content, true);
           const itemList = node.getElementById("list");
@@ -401,16 +410,6 @@
           this.attachShadow({ mode: "open" });
           this.shadowRoot.appendChild(node);
         }
-
-        themes = [
-          { name: "Theme A", background: "#fff", text: "#000" },
-          { name: "Theme B", background: "#bd2742", text: "#e2e9fe" },
-          { name: "Theme C", background: "#00ffc2", text: "#474a7b" },
-          { name: "Theme D", background: "#c8d5ff", text: "#da1135" },
-          { name: "Theme E", background: "#ffb500", text: "#000" },
-          { name: "Theme F", background: "#221f2b", text: "#ff5f46" },
-          { name: "Theme G", background: "#326366", text: "#ffaaa5" }
-        ];
       }
 
       customElements.define("theme-picker", ThemePicker);
