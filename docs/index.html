@@ -30,17 +30,14 @@
         --color-background: #fff;
         --color-text: #000;
       }
-      *,
-      ::before,
-      ::after {
-        box-sizing: inherit;
+      * {
+        box-sizing: border-box;
       }
       body {
         margin: 0;
-        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
         color: var(--color-text);
         background: var(--color-background);
-        font-family: "Montserrat", sans-serif;
         line-height: 1.7;
         font-weight: 400;
       }
@@ -292,7 +289,6 @@
     <template id="theme-picker">
       <style>
         :host {
-          box-sizing: border-box;
           display: inline-block;
           max-width: 100%;
           padding: 0.25rem 0;
@@ -300,7 +296,7 @@
           background: #000;
         }
         * {
-          box-sizing: inherit;
+          box-sizing: border-box;
         }
         h2 {
           margin: 0;
@@ -331,7 +327,6 @@
         }
         input {
           position: absolute;
-          width: 100%;
           z-index: -1;
         }
         .label-text {
