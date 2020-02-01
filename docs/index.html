@@ -149,7 +149,6 @@
         </p>
       </header>
       <main>
-        <theme-picker></theme-picker>
         <section id="links">
           <h2>Links</h2>
           <div class="links">
@@ -179,6 +178,7 @@
             </address>
           </div>
         </section>
+        <section id="color-theme"><theme-picker></theme-picker></section>
         <section id="me">
           <h2>About Me</h2>
           <p>
@@ -396,12 +396,12 @@
               </li>
             `;
 
+            const input = itemTemplate.content.querySelector("input");
             const onChange = () => {
               document.documentElement.style.setProperty("--color-background", theme.background);
               document.documentElement.style.setProperty("--color-text", theme.text);
             };
 
-            const input = itemTemplate.content.querySelector("input");
             if (i === 0) input.checked = true;
             input.addEventListener("change", onChange);
             itemList.appendChild(itemTemplate.content);
