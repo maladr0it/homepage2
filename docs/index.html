@@ -72,49 +72,12 @@
         margin: auto;
       }
 
-      @media (max-width: 40rem) {
-        .page-header {
-          display: grid;
-          grid-template-areas:
-            "image"
-            "title"
-            "intro";
-        }
-      }
-
-      @media (min-width: 40rem) {
-        .page-header {
-          display: grid;
-          align-items: center;
-          grid-template-columns: auto 1fr;
-          grid-gap: 0 2rem;
-          grid-template-areas:
-            "title image"
-            "intro intro";
-        }
-      }
-
       .hero-image-container {
         grid-area: image;
         position: relative;
         overflow: hidden;
         border: 2px solid;
         border-color: var(--color-text);
-      }
-
-      @media (max-width: 40rem) {
-        .hero-image-container {
-          padding-bottom: calc(70% - 4px); /* exclude border thickness to keep proportion */
-          border-radius: 8px;
-        }
-      }
-
-      @media (min-width: 40rem) {
-        .hero-image-container {
-          width: 6rem;
-          height: 6rem;
-          border-radius: 50%;
-        }
       }
 
       .hero-image {
@@ -130,6 +93,39 @@
 
       .page-intro {
         grid-area: intro;
+      }
+
+      @media (max-width: 639px) {
+        .page-header {
+          display: grid;
+          grid-template-areas:
+            "image"
+            "title"
+            "intro";
+        }
+
+        .hero-image-container {
+          padding-bottom: calc(70% - 4px); /* exclude border thickness to keep proportion */
+          border-radius: 8px;
+        }
+      }
+
+      @media (min-width: 640px) {
+        .page-header {
+          display: grid;
+          align-items: center;
+          grid-template-columns: auto 1fr;
+          grid-gap: 0 2rem;
+          grid-template-areas:
+            "title image"
+            "intro intro";
+        }
+
+        .hero-image-container {
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+        }
       }
 
       .links > * {
@@ -183,13 +179,13 @@
         <div class="hero-image-container">
           <picture>
             <source
-              media="(min-width: 40rem)"
+              media="(min-width: 640px)"
               type="image/webp"
               srcset="img/hero_cropped_300w.webp 1x, img/hero_cropped_500w.webp 2x"
             />
             <source type="image/webp" srcset="img/hero_800w.webp 1x, img/hero_1200w.webp 2x" />
             <source
-              media="(min-width: 40rem)"
+              media="(min-width: 640px)"
               type="image/jpeg"
               srcset="img/hero_cropped_300w.jpg 1x, img/hero_cropped_500w.jpg 2x"
             />
