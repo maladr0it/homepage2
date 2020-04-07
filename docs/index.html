@@ -59,13 +59,7 @@
       }
 
       main {
-        margin-top: 2.5rem;
-      }
-
-      @media (min-width: 40rem) {
-        main {
-          margin-top: 1.5rem;
-        }
+        margin-top: 1.5rem;
       }
 
       section:not(:first-child) {
@@ -78,20 +72,30 @@
         margin: auto;
       }
 
+      @media (max-width: 40rem) {
+        .page-header {
+          display: grid;
+          grid-template-areas:
+            "image"
+            "title"
+            "intro";
+        }
+      }
+
       @media (min-width: 40rem) {
         .page-header {
           display: grid;
           align-items: center;
           grid-template-columns: auto 1fr;
-          grid-gap: 2rem;
+          grid-gap: 0 2rem;
+          grid-template-areas:
+            "title image"
+            "intro intro";
         }
       }
 
-      .links > * {
-        margin: 0.6em 0;
-      }
-
       .hero-image-container {
+        grid-area: image;
         position: relative;
         overflow: hidden;
         border: 2px solid;
@@ -107,8 +111,8 @@
 
       @media (min-width: 40rem) {
         .hero-image-container {
-          width: 12rem;
-          height: 12rem;
+          width: 6rem;
+          height: 6rem;
           border-radius: 50%;
         }
       }
@@ -118,6 +122,18 @@
         width: 100%;
         top: 50%;
         transform: translateY(-50%);
+      }
+
+      .page-title {
+        grid-area: title;
+      }
+
+      .page-intro {
+        grid-area: intro;
+      }
+
+      .links > * {
+        margin: 0.6em 0;
       }
 
       .job-list {
@@ -181,20 +197,20 @@
             <img src="img/hero_cropped_300w.jpg" class="hero-image" alt="me" />
           </picture>
         </div>
-        <div>
+        <div class="page-title">
           <h1>Hi! 👋 I'm Lochie</h1>
           <p>More formally Lachlan Bradford.</p>
-          <p>
-            I'm a
-            <a
-              href="https://medium.com/indeed-design/what-is-a-design-technologist-6431531f0d48"
-              target="blank"
-              rel="noopener noreferrer"
-              >Design Technologist</a
-            >
-            at Indeed who strives to unlock the full potential of UI.&nbsp;🦄
-          </p>
         </div>
+        <p class="page-intro">
+          I'm a
+          <a
+            href="https://medium.com/indeed-design/what-is-a-design-technologist-6431531f0d48"
+            target="blank"
+            rel="noopener noreferrer"
+            >Design Technologist</a
+          >
+          at Indeed who strives to unlock the full potential of UI.&nbsp;🦄
+        </p>
       </header>
       <main>
         <section id="links">
