@@ -166,9 +166,19 @@
       <header class="page-header">
         <div class="hero-image-container">
           <picture>
-            <source media="(min-width: 40rem)" srcset="img/hero_cropped.jpg" />
-            <source srcset="img/hero_800w.jpg 1x, img/hero_1200w.jpg 2x" />
-            <img src="img/hero_cropped.jpg" class="hero-image" alt="me" />
+            <source
+              media="(min-width: 40rem)"
+              type="image/webp"
+              srcset="img/hero_cropped_300w.webp 1x, img/hero_cropped_500w.webp 2x"
+            />
+            <source type="image/webp" srcset="img/hero_800w.webp 1x, img/hero_1200w.webp 2x" />
+            <source
+              media="(min-width: 40rem)"
+              type="image/jpeg"
+              srcset="img/hero_cropped_300w.jpg 1x, img/hero_cropped_500w.jpg 2x"
+            />
+            <source type="image/jpeg" srcset="img/hero_800w.jpg 1x, img/hero_1200w.jpg 2x" />
+            <img src="img/hero_cropped_300w.jpg" class="hero-image" alt="me" />
           </picture>
         </div>
         <div>
