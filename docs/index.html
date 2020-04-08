@@ -74,21 +74,9 @@
 
       .hero-image-container {
         grid-area: image;
-        position: relative;
         overflow: hidden;
         border: 2px solid;
         border-color: var(--color-text);
-      }
-
-      .hero-image {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .page-title {
-        grid-area: title;
       }
 
       .page-intro {
@@ -105,8 +93,17 @@
         }
 
         .hero-image-container {
+          position: relative;
+          overflow: hidden;
           padding-bottom: calc(70% - 4px); /* exclude border thickness to keep proportion */
           border-radius: 8px;
+        }
+
+        .hero-image {
+          position: absolute;
+          width: 100%;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
 
@@ -114,17 +111,19 @@
         .page-header {
           display: grid;
           align-items: center;
-          grid-template-columns: auto 1fr;
+          grid-template-columns: fit-content(26rem) 12rem;
           grid-gap: 0 2rem;
-          grid-template-areas:
-            "title image"
-            "intro intro";
+          grid-template-areas: "intro image";
+          justify-items: flex-start;
         }
 
         .hero-image-container {
-          width: 6rem;
-          height: 6rem;
           border-radius: 50%;
+        }
+
+        .hero-image {
+          display: block;
+          width: 100%;
         }
       }
 
@@ -193,20 +192,20 @@
             <img src="img/hero_cropped_300w.jpg" class="hero-image" alt="me" />
           </picture>
         </div>
-        <div class="page-title">
+        <div class="page-intro">
           <h1>Hi! 👋 I'm Lochie</h1>
           <p>More formally Lachlan Bradford.</p>
+          <p>
+            I'm a
+            <a
+              href="https://medium.com/indeed-design/what-is-a-design-technologist-6431531f0d48"
+              target="blank"
+              rel="noopener noreferrer"
+              >Design Technologist</a
+            >
+            at Indeed who strives to unlock the full potential of UI.&nbsp;🦄
+          </p>
         </div>
-        <p class="page-intro">
-          I'm a
-          <a
-            href="https://medium.com/indeed-design/what-is-a-design-technologist-6431531f0d48"
-            target="blank"
-            rel="noopener noreferrer"
-            >Design Technologist</a
-          >
-          at Indeed who strives to unlock the full potential of UI.&nbsp;🦄
-        </p>
       </header>
       <main>
         <section id="links">
