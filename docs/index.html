@@ -94,9 +94,10 @@
 
         .hero-image-container {
           position: relative;
-          overflow: hidden;
           padding-bottom: calc(70% - 4px); /* exclude border thickness to keep proportion */
           border-radius: 8px;
+          border: 2px solid;
+          border-color: var(--color-text);
         }
 
         .hero-image {
@@ -394,12 +395,14 @@
 
         input {
           position: absolute;
-          z-index: -1;
+          opacity: 0;
+          pointer-events: none;
         }
 
         .label-text {
           position: absolute;
-          z-index: -1;
+          opacity: 0;
+          pointer-events: none;
         }
 
         .preview {
