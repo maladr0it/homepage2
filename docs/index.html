@@ -38,7 +38,7 @@
         font-family: "Montserrat", sans-serif;
         box-sizing: border-box;
         color: var(--color-text);
-        background: var(--color-background);
+        background-color: var(--color-background);
         line-height: 1.7;
         font-weight: 400;
       }
@@ -112,7 +112,7 @@
         .page-header {
           display: grid;
           align-items: center;
-          grid-template-columns: fit-content(26rem) 12rem;
+          grid-template-columns: fit-content(26rem) auto;
           grid-gap: 0 2rem;
           grid-template-areas: "intro image";
           justify-items: flex-start;
@@ -120,6 +120,8 @@
 
         .hero-image-container {
           border-radius: 50%;
+          height: 12rem;
+          width: 12rem;
         }
 
         .hero-image {
@@ -143,23 +145,24 @@
 
       .job-header {
         display: flex;
-        align-items: flex-start;
       }
 
       .job-logo-container {
-        display: flex;
-        align-items: center;
-        margin-top: 0.5rem; /* align optically with job title  */
+        height: 4.2rem;
+        width: 4.2rem;
+        margin-top: 0.5rem; /* align optically with job title */
         margin-right: 1rem;
         padding: 0.5rem;
         border: 2px solid;
         border-radius: 8px;
         border-color: var(--color-text);
-        background: #fff;
+        background-color: #fff;
       }
 
       .job-logo {
-        width: 3rem;
+        display: block;
+        width: 100%;
+        object-fit: cover;
       }
 
       .job-title {
@@ -357,7 +360,7 @@
         form {
           padding: 0.25rem 0;
           color: #fff;
-          background: #000;
+          background-color: #000;
         }
 
         form:focus-within {
@@ -466,8 +469,8 @@
                   <input type="radio" name="theme" aria-hidden="false" />
                   <span class="label-text" aria-hidden="false">${theme.name}</span>
                   <div class="preview">
-                    <div class="preview-background" style="background: ${theme.background};"></div>
-                    <div class="preview-text" style="background: ${theme.text}"></div>
+                    <div class="preview-background" style="background-color: ${theme.background};"></div>
+                    <div class="preview-text" style="background-color: ${theme.text}"></div>
                   </div>
                 </label>
               </li>
