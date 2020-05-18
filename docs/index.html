@@ -56,16 +56,16 @@
       }
 
       main {
-        margin-top: 24px;
+        margin-top: 1.5rem;
       }
 
       section:not(:first-child) {
-        margin-top: 40px;
+        margin-top: 2.5rem;
       }
 
       .page {
-        max-width: 900px;
-        padding: 8px 12px;
+        max-width: 56rem;
+        padding: 0.5rem 0.75rem;
         margin: auto;
       }
 
@@ -80,7 +80,7 @@
         grid-area: intro;
       }
 
-      @media (max-width: 639px) {
+      @media (max-width: 39.99em) {
         .page-header {
           display: grid;
           grid-template-areas:
@@ -105,20 +105,20 @@
         }
       }
 
-      @media (min-width: 640px) {
+      @media (min-width: 40em) {
         .page-header {
           display: grid;
           align-items: center;
           grid-template-columns: fit-content(420px) auto;
-          grid-gap: 0 32px;
+          grid-gap: 0 2rem;
           grid-template-areas: "intro image";
           justify-items: flex-start;
         }
 
         .hero-image-container {
           border-radius: 50%;
-          height: 192px;
-          width: 192px;
+          height: 12rem;
+          width: 12rem;
         }
 
         .hero-image {
@@ -137,7 +137,7 @@
       }
 
       .job-list li:not(:first-child) {
-        margin-top: 32px;
+        margin-top: 2rem;
       }
 
       .job-header {
@@ -145,11 +145,11 @@
       }
 
       .job-logo-container {
-        height: 64px;
-        width: 64px;
-        margin-top: 10px; /* align optically with job title */
-        margin-right: 16px;
-        padding: 8px;
+        height: 4rem;
+        width: 4rem;
+        margin-top: 0.625rem; /* align optically with job title */
+        margin-right: 1rem;
+        padding: 0.5rem;
         border: 2px solid;
         border-radius: 8px;
         border-color: var(--color-text);
@@ -167,7 +167,7 @@
       }
 
       .job-period {
-        font-size: 14px;
+        font-size: 0.875rem;
         opacity: 0.8;
       }
     </style>
@@ -179,13 +179,13 @@
         <div class="hero-image-container">
           <picture>
             <source
-              media="(min-width: 640px)"
+              media="(min-width: 40em)"
               type="image/webp"
               srcset="img/hero_cropped_300w.webp 1x, img/hero_cropped_500w.webp 2x"
             />
             <source type="image/webp" srcset="img/hero_800w.webp 1x, img/hero_1200w.webp 2x" />
             <source
-              media="(min-width: 640px)"
+              media="(min-width: 40em)"
               type="image/jpeg"
               srcset="img/hero_cropped_300w.jpg 1x, img/hero_cropped_500w.jpg 2x"
             />
@@ -343,20 +343,20 @@
         }
 
         form {
-          padding: 4px 0;
+          padding: 0.25rem 0;
           color: #fff;
           background-color: #000;
         }
 
         form:focus-within {
-          outline: 4px solid #67cff3;
+          outline: 0.25rem solid #67cff3;
         }
 
         h2 {
           margin: 0;
-          font-size: 16px;
+          font-size: 1rem;
           font-weight: 500;
-          margin-left: 8px;
+          margin-left: 0.5rem;
         }
 
         .list-container {
@@ -368,17 +368,17 @@
           display: flex;
           list-style: none;
           margin: 0;
-          padding: 4px 8px;
+          padding: 0.25rem 0.5rem;
         }
 
         li {
           position: relative;
-          width: 64px;
-          height: 64px;
+          width: 4rem;
+          height: 4rem;
         }
 
         li:not(:first-child) {
-          margin-left: -4px;
+          margin-left: -0.25rem;
         }
 
         label {
@@ -402,7 +402,7 @@
           flex-direction: column;
           width: 100%;
           height: 100%;
-          border: 4px solid black;
+          border: 0.25rem solid black;
         }
 
         .preview-background {
@@ -416,7 +416,7 @@
         input:checked ~ .preview {
           position: absolute;
           z-index: 1;
-          outline: 4px solid white;
+          outline: 0.25rem solid white;
         }
       </style>
 
