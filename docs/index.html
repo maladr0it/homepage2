@@ -46,6 +46,12 @@
         font-weight: 400;
       }
 
+      main {
+        max-width: 56rem;
+        padding: 0.5rem 0.75rem;
+        margin: auto;
+      }
+
       h1,
       h2,
       h3 {
@@ -61,18 +67,8 @@
         font-style: normal;
       }
 
-      main {
-        margin-top: 1.5rem;
-      }
-
       section:not(:first-child) {
         margin-top: 2.5rem;
-      }
-
-      .page {
-        max-width: 56rem;
-        padding: 0.5rem 0.75rem;
-        margin: auto;
       }
 
       .hero-image-container {
@@ -175,7 +171,7 @@
   </head>
 
   <body>
-    <div class="page">
+    <main>
       <header class="page-header">
         <div class="hero-image-container">
           <picture>
@@ -209,7 +205,7 @@
           </p>
         </div>
       </header>
-      <main>
+      <div>
         <section id="links">
           <h2>Links</h2>
           <div class="links">
@@ -329,8 +325,8 @@
             </li>
           </ul>
         </section>
-      </main>
-    </div>
+      </div>
+    </main>
 
     <template id="theme-picker">
       <style>
