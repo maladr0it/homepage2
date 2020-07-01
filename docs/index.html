@@ -67,7 +67,7 @@
         font-style: normal;
       }
 
-      section:not(:first-child) {
+      section + section {
         margin-top: 2.5rem;
       }
 
@@ -112,7 +112,7 @@
           display: grid;
           align-items: center;
           grid-template-columns: fit-content(26rem) auto;
-          grid-gap: 0 2rem;
+          gap: 0 2rem;
           grid-template-areas: "intro image";
           justify-items: flex-start;
         }
@@ -133,7 +133,7 @@
         padding-left: 0;
       }
 
-      .job-list li:not(:first-child) {
+      .job-list li + li {
         margin-top: 2rem;
       }
 
@@ -147,6 +147,7 @@
         margin-top: 0.625rem; /* align optically with job title */
         margin-right: 1rem;
         padding: 0.5rem;
+        flex-shrink: 0;
         border: 2px solid;
         border-radius: 8px;
         border-color: var(--color-text);
@@ -255,8 +256,9 @@
             <li>
               <header class="job-header">
                 <picture class="job-logo-container">
-                  <source type="image/webp" srcset="img/indeed_logo_128.webp" />
-                  <img src="img/indeed_logo_128.png" class="job-logo" alt="Indeed logo" />
+                  <source type="image/webp" srcset="img/indeed_logo_64w.webp 1x, img/indeed_logo_128w.webp 2x" />
+                  <source type="image/png" srcset="img/indeed_logo_64w.png 1x, img/indeed_logo_128w.png 2x" />
+                  <img src="img/indeed_logo_64w.png" class="job-logo" alt="Indeed logo" />
                 </picture>
                 <div>
                   <h3 class="job-title">Design Technologist</h3>
@@ -279,8 +281,9 @@
             <li>
               <header class="job-header">
                 <picture class="job-logo-container">
-                  <source type="image/webp" srcset="img/tabiko_logo_128.webp" />
-                  <img src="img/tabiko_logo_128.png" class="job-logo" alt="Tabiko logo" />
+                  <source type="image/webp" srcset="img/tabiko_logo_64w.webp 1x, img/tabiko_logo_128w.webp 2x" />
+                  <source type="image/png" srcset="img/tabiko_logo_64w.png 1x, img/tabiko_logo_128w.png 2x" />
+                  <img src="img/tabiko_logo_64w.png" class="job-logo" alt="Tabiko logo" />
                 </picture>
                 <div>
                   <h3 class="job-title">Front-end Developer</h3>
@@ -302,8 +305,9 @@
             <li>
               <header class="job-header">
                 <picture class="job-logo-container">
-                  <source type="image/webp" srcset="img/fusion_logo_128.webp" />
-                  <img src="img/fusion_logo_128.png" class="job-logo" alt="Fusion Systems logo" />
+                  <source type="image/webp" srcset="img/fusion_logo_64w.webp 1x, img/fusion_logo_128w.webp 2x" />
+                  <source type="image/png" srcset="img/fusion_logo_64w.png 1x, img/fusion_logo_128w.png 2x" />
+                  <img src="img/fusion_logo_64w.png" class="job-logo" alt="Fusion Systems logo" />
                 </picture>
                 <div>
                   <h3 class="job-title">Front-end Developer</h3>
@@ -374,7 +378,7 @@
           height: 4rem;
         }
 
-        li:not(:first-child) {
+        li + li {
           margin-left: -0.25rem;
         }
 
