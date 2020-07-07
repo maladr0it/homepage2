@@ -29,7 +29,14 @@
     <style>
       :root {
         --color-background: #fff;
-        --color-text: #000;
+        --color-text: #121212;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-background: #121212;
+          --color-text: #fff;
+        }
       }
 
       * {
@@ -142,9 +149,9 @@
       }
 
       .job-logo-container {
-        height: 4rem;
-        width: 4rem;
-        margin-top: 0.625rem; /* align optically with job title */
+        height: 4.5rem;
+        width: 4.5rem;
+        margin-top: 0.375rem; /* align optically with job title */
         margin-right: 1rem;
         padding: 0.5rem;
         flex-shrink: 0;
@@ -265,17 +272,15 @@
                 <div class="job-period">Jul 2018 – Present</div>
               </div>
             </header>
-            <div>
-              <p>
-                I work closely with designers and product managers on cross-functional teams to launch experiments in
-                the form of prototypes and A/B tests. As well as this, I contribute to our company-wide design system
-                and component library with an emphasis on accessibility.
-              </p>
-              <p>
-                By my own initiative, I also train full-stack engineers in modern front-end practices with workshops and
-                in pairing sessions for our production codebase.
-              </p>
-            </div>
+            <p>
+              I work closely with designers and product managers on cross-functional teams to launch experiments in the
+              form of prototypes and A/B tests. As well as this, I contribute to our company-wide design system and
+              component library with an emphasis on accessibility.
+            </p>
+            <p>
+              By my own initiative, I also train full-stack engineers in modern front-end practices with workshops and
+              in pairing sessions for our production codebase.
+            </p>
           </li>
           <li>
             <header class="job-header">
@@ -290,16 +295,14 @@
                 <div class="job-period">Nov 2017 – Jul 2018</div>
               </div>
             </header>
-            <div>
-              <p>
-                Here I built a one-to-many chat application to handle many thousands of customer interactions at
-                Tabiko.ai. It offers a high performance UI to manage payments, itineraries and travel-related search.
-              </p>
-              <p>
-                I introduced practices such as Test-Driven-Development and code-reviews to bring the engineering team to
-                new levels of productivity.
-              </p>
-            </div>
+            <p>
+              Here I built a one-to-many chat application to handle many thousands of customer interactions at
+              Tabiko.ai. It offers a high performance UI to manage payments, itineraries and travel-related search.
+            </p>
+            <p>
+              I introduced practices such as Test-Driven-Development and code-reviews to bring the engineering team to
+              new levels of productivity.
+            </p>
           </li>
           <li>
             <header class="job-header">
@@ -314,17 +317,15 @@
                 <div class="job-period">Sep 2016 – Nov 2017</div>
               </div>
             </header>
-            <div>
-              <p>
-                Here I helped build <em>Dimare</em>, a work-shift management software for several restaurant chains in
-                South-East-Asia. I worked closely with designers to realize the UX vision for the product, while also
-                consulting with our clients to identify their use-cases and pain-points.
-              </p>
-              <p>
-                I worked with a team of six developers, learning about advanced state management, agile methodology and
-                javascript best-practices.
-              </p>
-            </div>
+            <p>
+              Here I helped build <em>Dimare</em>, a work-shift management software for several restaurant chains in
+              South-East-Asia. I worked closely with designers to realize the UX vision for the product, while also
+              consulting with our clients to identify their use-cases and pain-points.
+            </p>
+            <p>
+              I worked with a team of six developers, learning about advanced state management, agile methodology and
+              javascript best-practices.
+            </p>
           </li>
         </ul>
       </section>
@@ -432,10 +433,10 @@
         constructor() {
           super();
           this.themes = [
-            { name: "Theme A", background: "#fff", text: "#000" },
-            { name: "Theme B", background: "#bd2742", text: "#e2e9fe" },
-            { name: "Theme C", background: "#00ffc2", text: "#474a7b" },
-            { name: "Theme D", background: "#c8d5ff", text: "#da1135" },
+            { name: "Theme A", background: "#fff", text: "#121212" },
+            { name: "Theme B", background: "#121212", text: "#fff" },
+            { name: "Theme C", background: "#bd2742", text: "#e2e9fe" },
+            { name: "Theme D", background: "#00ffc2", text: "#474a7b" },
             { name: "Theme E", background: "#ffb500", text: "#000" },
             { name: "Theme F", background: "#221f2b", text: "#ff5f46" },
             { name: "Theme G", background: "#326366", text: "#ffaaa5" },
@@ -443,6 +444,7 @@
           const template = document.getElementById("theme-picker");
           const node = document.importNode(template.content, true);
           const itemList = node.getElementById("list");
+          const initialThemeIdx = window.matchMedia("(prefers-color-scheme: dark)") ? 1 : 0;
 
           for (let i = 0; i < this.themes.length; i++) {
             const theme = this.themes[i];
@@ -466,7 +468,9 @@
               document.documentElement.style.setProperty("--color-text", theme.text);
             };
 
-            if (i === 0) input.checked = true;
+            if (i === initialThemeIdx) {
+              input.checked = true;
+            }
             input.addEventListener("change", onChange);
             itemList.appendChild(itemTemplate.content);
           }
@@ -478,6 +482,7 @@
 
       customElements.define("theme-picker", ThemePicker);
     </script>
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
