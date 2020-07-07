@@ -432,7 +432,7 @@
       class ThemePicker extends HTMLElement {
         constructor() {
           super();
-          this.themes = [
+          const themes = [
             { name: "Theme A", background: "#fff", text: "#121212" },
             { name: "Theme B", background: "#121212", text: "#fff" },
             { name: "Theme C", background: "#bd2742", text: "#e2e9fe" },
@@ -441,18 +441,24 @@
             { name: "Theme F", background: "#221f2b", text: "#ff5f46" },
             { name: "Theme G", background: "#326366", text: "#ffaaa5" },
           ];
+          const initialThemeIdx = window.matchMedia("(prefers-color-scheme: dark)") ? 1 : 0;
           const template = document.getElementById("theme-picker");
           const node = document.importNode(template.content, true);
           const itemList = node.getElementById("list");
-          const initialThemeIdx = window.matchMedia("(prefers-color-scheme: dark)") ? 1 : 0;
 
-          for (let i = 0; i < this.themes.length; i++) {
-            const theme = this.themes[i];
+          const onChange = (event) => {
+            const theme = themes[event.target.value];
+            document.documentElement.style.setProperty("--color-background", theme.background);
+            document.documentElement.style.setProperty("--color-text", theme.text);
+          };
+
+          for (let i = 0; i < themes.length; i++) {
+            const theme = themes[i];
             const itemTemplate = document.createElement("template");
             itemTemplate.innerHTML = `
               <li>
                 <label>
-                  <input type="radio" name="theme" aria-hidden="false" />
+                  <input type="radio" name="theme" aria-hidden="false" value="${i}" />
                   <span class="label-text" aria-hidden="false">${theme.name}</span>
                   <div class="preview">
                     <div class="preview-background" style="background-color: ${theme.background};"></div>
@@ -463,11 +469,6 @@
             `;
 
             const input = itemTemplate.content.querySelector("input");
-            const onChange = () => {
-              document.documentElement.style.setProperty("--color-background", theme.background);
-              document.documentElement.style.setProperty("--color-text", theme.text);
-            };
-
             if (i === initialThemeIdx) {
               input.checked = true;
             }
