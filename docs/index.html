@@ -451,13 +451,12 @@
             document.documentElement.style.setProperty("--color-text", theme.text);
           };
 
-          for (let i = 0; i < themes.length; i++) {
-            const theme = themes[i];
+          for (const [idx, theme] of themes.entries()) {
             const itemTemplate = document.createElement("template");
             itemTemplate.innerHTML = `
               <li>
                 <label>
-                  <input type="radio" name="theme" aria-hidden="false" value="${i}" />
+                  <input type="radio" name="theme" aria-hidden="false" value="${idx}" />
                   <span class="label-text" aria-hidden="false">${theme.name}</span>
                   <div class="preview">
                     <div class="preview-background" style="background-color: ${theme.background};"></div>
@@ -467,9 +466,7 @@
               </li>
             `;
             const input = itemTemplate.content.querySelector("input");
-            if (i === initialThemeIdx) {
-              input.checked = true;
-            }
+            if (idx === initialThemeIdx) input.checked = true;
             input.addEventListener("change", onChange);
             itemList.appendChild(itemTemplate.content);
           }
