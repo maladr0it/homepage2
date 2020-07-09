@@ -440,7 +440,7 @@
             { name: "Theme F", background: "#221f2b", text: "#ff5f46" },
             { name: "Theme G", background: "#326366", text: "#ffaaa5" },
           ];
-          const initialThemeIdx = window.matchMedia("(prefers-color-scheme: dark)") ? 1 : 0;
+          const initialThemeIdx = window.matchMedia("(prefers-color-scheme: dark)").matches ? 1 : 0;
           const template = document.getElementById("theme-picker");
           const node = document.importNode(template.content, true);
           const itemList = node.getElementById("list");
@@ -476,7 +476,7 @@
         }
       }
 
-      customElements.define("theme-picker", ThemePicker);
+      window.customElements.define("theme-picker", ThemePicker);
     </script>
 
     <link
