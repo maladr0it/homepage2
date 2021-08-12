@@ -47,16 +47,16 @@
         margin: 0;
         font-family: "Montserrat", sans-serif;
         box-sizing: border-box;
-        color: var(--color-text);
-        background-color: var(--color-background);
         line-height: 1.7;
         font-weight: 400;
+        color: var(--color-text);
+        background-color: var(--color-background);
       }
 
       main {
         max-width: 56rem;
-        padding: 0.5rem 0.75rem;
         margin: auto;
+        padding: 0.5rem;
       }
 
       h1,
@@ -66,8 +66,8 @@
       }
 
       a {
-        color: var(--color-text);
         font-weight: 500;
+        color: var(--color-text);
       }
 
       address {
@@ -82,7 +82,7 @@
         grid-area: image;
         position: relative;
         overflow: hidden;
-        border: 2px solid;
+        border: 1px solid;
         border-color: var(--color-text);
       }
 
@@ -106,10 +106,8 @@
         }
 
         .hero-image-container {
-          padding-bottom: calc(70% - 4px); /* exclude border thickness to keep proportion */
-          border-radius: 8px;
-          border: 2px solid;
-          border-color: var(--color-text);
+          padding-bottom: calc(70% - 2px); /* exclude border thickness to keep desired aspect-ratio */
+          border-radius: 0.5rem;
         }
       }
 
@@ -139,30 +137,30 @@
         padding-left: 0;
       }
 
-      .job-list li + li {
+      .job-list > li + li {
         margin-top: 2rem;
       }
 
       .job-header {
         display: flex;
+        align-items: flex-start;
       }
 
       .job-logo-container {
-        height: 4.5rem;
-        width: 4.5rem;
-        margin-top: 0.375rem; /* align optically with job title */
+        margin-top: 0.425rem; /* align optically with top of job title */
         margin-right: 1rem;
-        padding: 0.5rem;
+        padding: 0.125rem;
         flex-shrink: 0;
-        border: 2px solid;
-        border-radius: 8px;
+        border: 1px solid;
+        border-radius: 0.5rem;
         border-color: var(--color-text);
         background-color: #fff;
       }
 
       .job-logo {
         display: block;
-        width: 100%;
+        width: 4rem;
+        height: 4rem;
         object-fit: cover;
       }
 
@@ -208,11 +206,11 @@
               rel="noopener noreferrer"
               >Design Technologist</a
             >
-            at Indeed who strives to unlock the full potential of UI.&nbsp;🦄
+            at PlayStation who strives to unlock the full potential of UI.&nbsp;🦄
           </p>
         </div>
       </header>
-      <section id="links">
+      <section>
         <h2>Links</h2>
         <div class="links">
           <div>
@@ -222,9 +220,9 @@
               >LinkedIn</a
             >
             /
-            <a href="https://twitter.com/maladr0it181" target="_blank" rel="noopener noreferrer">Twitter</a>
-            /
             <a href="https://codepen.io/maladr0it" target="_blank" rel="noopener noreferrer">CodePen</a>
+            /
+            <a href="https://twitter.com/maladr0it181" target="_blank" rel="noopener noreferrer">Twitter</a>
           </div>
           <address>
             <a href="mailto:bradford.lachlan@gmail.com" target="_blank" rel="noopener noreferrer"
@@ -233,17 +231,17 @@
           </address>
         </div>
       </section>
-      <section id="color-theme"><theme-picker></theme-picker></section>
-      <section id="me">
+      <section><theme-picker></theme-picker></section>
+      <section>
         <h2>About Me</h2>
         <p>
-          I love making beautiful, responsive web-applications. As a developer with strong UX experience, I am driven to
-          produce apps that feel natural to use and inspire delight in the user.
+          I love making beautiful, responsive UI. As a developer with strong UX experience, I am driven to produce apps
+          that feel natural to use and inspire delight in the user.
         </p>
         <p>
           I am an active participant in the web-development community, participating online via
           <a href="https://www.reactiflux.com/" target="_blank" rel="noopener noreferrer">Reactiflux</a>
-          as well as in local meetups and hackathons in Tokyo.
+          as well as in local meetups and hackathons in San Francisco.
         </p>
         <p>
           An avid traveller, I enjoy exploring new places for inspiration. My hobbies also include calligraphy, running
@@ -255,9 +253,34 @@
           in my coding sessions.
         </p>
       </section>
-      <section id="experience">
+      <section>
         <h2>Experience</h2>
         <ul class="job-list">
+          <li>
+            <header class="job-header">
+              <picture class="job-logo-container">
+                <source
+                  type="image/webp"
+                  srcset="img/playstation_logo_64w.webp 1x, img/playstation_logo_128w.webp 2x"
+                />
+                <source type="image/png" srcset="img/playstation_logo_64w.png 1x, img/playstation_logo_128w.png 2x" />
+                <img src="img/playstation_logo_64w.png" class="job-logo" alt="PlayStation logo" />
+              </picture>
+              <div>
+                <h3 class="job-title">Senior Design Technologist</h3>
+                <div>PlayStation · San Francisco</div>
+                <div class="job-period">Oct 2020 – Present</div>
+              </div>
+            </header>
+            <p>
+              I collaborate with a global team of designers focused on elevating the standard of design across the
+              organization and explore state-of-the-art concepts and technology.
+            </p>
+            <p>
+              I work with specialised, proprietary hardware and software, requiring the creation of high quality
+              documentation and a strong understanding of its inner workings.
+            </p>
+          </li>
           <li>
             <header class="job-header">
               <picture class="job-logo-container">
@@ -268,11 +291,11 @@
               <div>
                 <h3 class="job-title">Design Technologist</h3>
                 <div>Indeed · Tokyo</div>
-                <div class="job-period">Jul 2018 – Present</div>
+                <div class="job-period">Jul 2018 – Oct 2020</div>
               </div>
             </header>
             <p>
-              I work closely with designers and product managers on cross-functional teams to launch experiments in the
+              Worked closely with designers and product managers on cross-functional teams to launch experiments in the
               form of prototypes and A/B tests. As well as this, I contribute to our company-wide design system and
               component library with an emphasis on accessibility.
             </p>
@@ -290,13 +313,13 @@
               </picture>
               <div>
                 <h3 class="job-title">Front-end Developer</h3>
-                <div>Tabiko.ai · Tokyo</div>
+                <div>Tabiko (acquired by airtrip.jp) · Tokyo</div>
                 <div class="job-period">Nov 2017 – Jul 2018</div>
               </div>
             </header>
             <p>
-              Here I built a one-to-many chat application to handle many thousands of customer interactions at
-              Tabiko.ai. It offers a high performance UI to manage payments, itineraries and travel-related search.
+              Built a one-to-many chat application to handle many thousands of customer interactions at Tabiko.ai. It
+              offers a high performance UI to manage payments, itineraries and travel-related search.
             </p>
             <p>
               I introduced practices such as Test-Driven-Development and code-reviews to bring the engineering team to
@@ -377,7 +400,7 @@
           flex-direction: column;
           width: 100%;
           height: 100%;
-          border: 0.25rem solid black;
+          border: 0.25rem solid #000;
         }
 
         .preview-background {
@@ -391,7 +414,7 @@
         input:checked ~ .preview {
           position: absolute;
           z-index: 1;
-          outline: 0.25rem solid white;
+          outline: 0.25rem solid #fff;
         }
       </style>
 
@@ -442,7 +465,9 @@
               </li>
             `;
             const input = itemTemplate.content.querySelector("input");
-            if (idx === initialThemeIdx) input.checked = true;
+            if (idx === initialThemeIdx) {
+              input.checked = true;
+            }
             input.addEventListener("change", onChange);
             itemList.appendChild(itemTemplate.content);
           }
