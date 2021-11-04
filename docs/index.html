@@ -78,37 +78,13 @@
         margin-top: 2.5rem;
       }
 
-      .hero-image-container {
-        grid-area: image;
-        position: relative;
-        overflow: hidden;
+      .hero-image {
+        display: block;
+        width: 100%;
+        height: auto;
         border: 1px solid;
         border-color: var(--color-text);
-      }
-
-      .hero-image {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .page-intro {
-        grid-area: intro;
-      }
-
-      @media (max-width: 39.99em) {
-        .page-header {
-          display: grid;
-          grid-template-areas:
-            "image"
-            "intro";
-        }
-
-        .hero-image-container {
-          padding-bottom: calc(70% - 2px); /* exclude border thickness to keep desired aspect-ratio */
-          border-radius: 0.5rem;
-        }
+        border-radius: 0.5rem;
       }
 
       @media (min-width: 40em) {
@@ -121,10 +97,15 @@
           gap: 0 2rem;
         }
 
-        .hero-image-container {
-          border-radius: 50%;
+        .page-intro {
+          grid-area: intro;
+        }
+
+        .hero-image {
+          grid-area: image;
           height: 12rem;
           width: 12rem;
+          border-radius: 50%;
         }
       }
 
@@ -161,7 +142,6 @@
         display: block;
         width: 4rem;
         height: 4rem;
-        object-fit: cover;
       }
 
       .job-title {
@@ -178,23 +158,22 @@
   <body>
     <main>
       <header class="page-header">
-        <div class="hero-image-container">
-          <picture>
-            <source
-              media="(min-width: 40em)"
-              type="image/webp"
-              srcset="img/hero_cropped_250w.webp 1x, img/hero_cropped_500w.webp 2x"
-            />
-            <source
-              media="(min-width: 40em)"
-              type="image/jpeg"
-              srcset="img/hero_cropped_250w.jpeg 1x, img/hero_cropped_250w.jpeg 2x"
-            />
-            <source type="image/webp" srcset="img/hero_600w.webp 1x, img/hero_1200w.webp 2x" />
-            <source type="image/jpeg" srcset="img/hero_600w.jpeg 1x, img/hero_1200w.jpeg 2x" />
-            <img src="img/hero_cropped_250w.jpeg" class="hero-image" alt="Lachlan Bradford" />
-          </picture>
-        </div>
+        <picture>
+          <source
+            media="(min-width: 40em)"
+            type="image/webp"
+            srcset="img/hero_cropped_250w.webp 1x, img/hero_cropped_500w.webp 2x"
+          />
+          <source
+            media="(min-width: 40em)"
+            type="image/jpeg"
+            srcset="img/hero_cropped_250w.jpeg 1x, img/hero_cropped_250w.jpeg 2x"
+          />
+          <source type="image/webp" srcset="img/hero_600w.webp 1x, img/hero_1200w.webp 2x" />
+          <source type="image/jpeg" srcset="img/hero_600w.jpeg 1x, img/hero_1200w.jpeg 2x" />
+          <img src="img/hero_600w.jpeg" width="600" height="450" class="hero-image" alt="Lachlan Bradford" />
+        </picture>
+
         <div class="page-intro">
           <h1>Hi! 👋 I'm Lochie</h1>
           <p>More formally Lachlan Bradford.</p>
@@ -268,7 +247,13 @@
                   srcset="img/playstation_logo_64w.webp 1x, img/playstation_logo_128w.webp 2x"
                 />
                 <source type="image/png" srcset="img/playstation_logo_64w.png 1x, img/playstation_logo_128w.png 2x" />
-                <img src="img/playstation_logo_64w.png" class="job-logo" alt="PlayStation logo" />
+                <img
+                  src="img/playstation_logo_64w.png"
+                  width="64"
+                  height="64"
+                  class="job-logo"
+                  alt="PlayStation logo"
+                />
               </picture>
               <div>
                 <h3 class="job-title">Senior Design Technologist</h3>
@@ -290,7 +275,7 @@
               <picture class="job-logo-container">
                 <source type="image/webp" srcset="img/indeed_logo_64w.webp 1x, img/indeed_logo_128w.webp 2x" />
                 <source type="image/png" srcset="img/indeed_logo_64w.png 1x, img/indeed_logo_128w.png 2x" />
-                <img src="img/indeed_logo_64w.png" class="job-logo" alt="Indeed logo" />
+                <img src="img/indeed_logo_64w.png" width="64" height="64" class="job-logo" alt="Indeed logo" />
               </picture>
               <div>
                 <h3 class="job-title">Design Technologist</h3>
@@ -313,7 +298,7 @@
               <picture class="job-logo-container">
                 <source type="image/webp" srcset="img/tabiko_logo_64w.webp 1x, img/tabiko_logo_128w.webp 2x" />
                 <source type="image/png" srcset="img/tabiko_logo_64w.png 1x, img/tabiko_logo_128w.png 2x" />
-                <img src="img/tabiko_logo_64w.png" class="job-logo" alt="Tabiko logo" />
+                <img src="img/tabiko_logo_64w.png" width="64" height="64" class="job-logo" alt="Tabiko logo" />
               </picture>
               <div>
                 <h3 class="job-title">Front-end Developer</h3>
