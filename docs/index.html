@@ -189,7 +189,14 @@
           />
           <source type="image/webp" srcset="img/hero_600w.webp 1x, img/hero_1200w.webp 2x" />
           <source type="image/jpeg" srcset="img/hero_600w.jpeg 1x, img/hero_1200w.jpeg 2x" />
-          <img src="img/hero_600w.jpeg" width="600" height="450" class="hero-image" alt="Lachlan Bradford" />
+          <img
+            src="img/hero_600w.jpeg"
+            width="600"
+            height="450"
+            class="hero-image"
+            fetchpriority="high"
+            alt="Lachlan Bradford"
+          />
         </picture>
 
         <div class="page-intro">
@@ -198,6 +205,7 @@
           <p>I'm a design systems engineer at TikTok who strives to unlock the full potential of UI.&nbsp;🦄</p>
         </div>
       </header>
+
       <section>
         <h2>Links</h2>
         <div class="links">
@@ -218,7 +226,9 @@
           </address>
         </div>
       </section>
+
       <section><theme-picker></theme-picker></section>
+
       <section>
         <h2>About Me</h2>
         <p>
@@ -239,6 +249,7 @@
           in my coding sessions.
         </p>
       </section>
+
       <section>
         <h2>Experience</h2>
         <ul class="job-list">
